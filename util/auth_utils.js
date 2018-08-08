@@ -31,13 +31,6 @@ const login = (req, res, user) => new Promise((resolve, _reject) => {
   resolve(user);
 });
 
-// const logout = (req, res, next) => {
-//   const session = getSession(req);
-//   session['sessionToken'] = null;
-//   setSession(res, session);
-//   next();
-// }
-
 const logout = (req, res) => new Promise((resolve, _reject) => {
   const session = getSession(req);
   session['sessionToken'] = null;
