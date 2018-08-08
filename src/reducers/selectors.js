@@ -1,0 +1,1 @@
+export const getCurrentUser = ({ entities: { users }, session: { currentUser: id }}) => users[id];

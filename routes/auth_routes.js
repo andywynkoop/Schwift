@@ -1,4 +1,4 @@
-const { hash, random, login, logout, getSession } = require('../util/auth_utils.js');
+const { hash, check, random, login, logout, getSession } = require('../util/auth_utils.js');
 
 module.exports = (app, db) => {
 
@@ -15,7 +15,7 @@ module.exports = (app, db) => {
         login(req, res, user, () => {
           db.collection('users').insert(user, (err, user) => {
             if (err) res.send(err);
-            res.send(user);
+            res.send(user.ops[0]);
           });
         });
       });
@@ -35,14 +35,28 @@ module.exports = (app, db) => {
   //log in
   app.post('/api/session', (req, res) => {
     const { user } = req.body;
-    login(req, res, user, user => {
-      res.send(user);
-    });
+    const { email, password } = user;
+    db.collection('users').find({ email: email }).toArray((err, result) => {
+      userResult = result[0];
+      if (!userResult) return res.send("No User Found");
+      check(password, userResult.passwordDigest).then(result => {
+        if (result) {
+          login(req, res, userResult, user => {
+            console.log(user)
+            console.log('logging in')
+            res.send(user);
+          });
+        } else {
+          res.send('Invalid password')
+        }
+      })
+      
+    })
   });
 
   //log out
   app.delete('/api/session', (req, res) => {
-    logout(() => {
+    logout(req, res, () => {
       res.send("Logged out");
     });
   })

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 export default class SignUpForm extends Component {
   state = {
+    firstname: '',
+    lastname: '',
     username: '',
     email: '',
     password: ''
@@ -9,21 +11,21 @@ export default class SignUpForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.createUser(this.state);
+    this.props.save(this.state);
   }
   
   update = field => e => this.setState({ [field]: e.target.value });
 
   render() {
+    const { type, fields } = this.props;
     return(
       <form onSubmit={this.handleSubmit}>
-        <h1>Create Account</h1>
-        Username:
-        <input type="text" value={this.state.username} onChange={this.update('username')} />
-        Email:
-        <input type="text" value={this.state.email} onChange={this.update('email')} />
-        Password:s
-        <input type="text" value={this.state.password} onChange={this.update('password')} />
+        <h1>{type}</h1>
+        {fields.map((field, idx) => (
+          <li key={idx}>
+          {field} : <input type="text" value={this.state[field]} onChange={this.update(field)} />
+          </li>
+        ))}
         <button type="submit">Create</button>
       </form>
     )

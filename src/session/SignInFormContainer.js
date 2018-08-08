@@ -1,14 +1,14 @@
 import SessionForm from './SessionForm';
 import { connect } from 'react-redux';
-import { createUser } from './session_actions';
+import { login } from './session_actions';
 
 const mapStateToProps = (state) => ({
-  type: 'Create Account',
-  fields: ['firstname', 'lastname','username', 'email', 'password']
+  type: 'Login',
+  fields: ['email', 'password']
 })
 
 const mapDispatchToProps = dispatch => ({
-  save: user => dispatch(createUser(user))
+  save: user => dispatch(login(user))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm)

@@ -28,7 +28,7 @@ const login = (req, res, user, next) => {
   const session = getSession(req);
   session['sessionToken'] = user.sessionToken;
   setSession(res, session);
-  next();
+  next(user);
 }
 
 const logout = (req, res, next) => {
