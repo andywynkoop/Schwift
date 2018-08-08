@@ -11,7 +11,7 @@ module.exports = (app, db) => {
     delete user.password;
     const token = await random();
     user.sessionToken = token;
-    const newUser = await login(req, res, user);
+    await login(req, res, user);
     db.collection('users').insert(user, (err, user) => {
       if (err) res.send(err);
       res.send(user.ops[0]);
