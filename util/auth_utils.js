@@ -8,12 +8,12 @@ const hash = password =>
 const check = (password, hash) =>
   bcrypt.compare(password, hash);
 
-const random = next => {
+const random = () => new Promise((resolve, _reject) => {
   require('crypto').randomBytes(48, (err, buffer) => {
     if (err) console.log(err);
-    next(buffer.toString('hex'))
+    resolve(buffer.toString('hex'))
   });
-}
+});
 
 const getSession = req => {
   if (!req.cookies.junefs) return {};
@@ -24,19 +24,26 @@ const setSession = (res, newSession) => {
   res.cookie('junefs', JSON.stringify({ session: newSession }))
 }
 
-const login = (req, res, user, next) => {
+const login = (req, res, user) => new Promise((resolve, _reject) => {
   const session = getSession(req);
   session['sessionToken'] = user.sessionToken;
   setSession(res, session);
-  next(user);
-}
+  resolve(user);
+});
 
-const logout = (req, res, next) => {
+// const logout = (req, res, next) => {
+//   const session = getSession(req);
+//   session['sessionToken'] = null;
+//   setSession(res, session);
+//   next();
+// }
+
+const logout = (req, res) => new Promise((resolve, _reject) => {
   const session = getSession(req);
   session['sessionToken'] = null;
   setSession(res, session);
-  next();
-}
+  resolve();
+});
 
 const loggedIn = (req, _res, user) => {
   return getSession(req)['sessionToken'] === user.sessionToken;

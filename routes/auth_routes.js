@@ -10,9 +10,9 @@ module.exports = (app, db) => {
       user.passwordDigest = passwordDigest;
       delete user.password;
       //generate session token and set on user and session
-      random(token => {
+      random().then(token => {
         user.sessionToken = token;
-        login(req, res, user, () => {
+        login(req, res, user).then(user => {
           db.collection('users').insert(user, (err, user) => {
             if (err) res.send(err);
             res.send(user.ops[0]);
@@ -41,7 +41,7 @@ module.exports = (app, db) => {
       if (!userResult) return res.send("No User Found");
       check(password, userResult.passwordDigest).then(result => {
         if (result) {
-          login(req, res, userResult, user => {
+          login(req, res, userResult).then(user => {
             console.log(user)
             console.log('logging in')
             res.send(user);
@@ -56,8 +56,6 @@ module.exports = (app, db) => {
 
   //log out
   app.delete('/api/session', (req, res) => {
-    logout(req, res, () => {
-      res.send("Logged out");
-    });
+    logout(req, res).then(() => res.send('logout'));
   })
 }
