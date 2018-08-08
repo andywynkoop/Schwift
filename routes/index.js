@@ -1,5 +1,5 @@
 const authRoutes = require('./auth_routes');
 
-module.exports = app => {
-  authRoutes(app);
+module.exports = (app, db) => {
+  authRoutes(app, db);
 }

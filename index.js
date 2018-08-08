@@ -4,18 +4,24 @@ const port = 3210;
 const path = require('path');
 const root = path.resolve(__dirname, 'dist', 'root.html');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const db = require('./db');
 const route = require('./routes');
 app.use(express.static('dist'));
 
 app.use(cookieParser())
-// yield to the router
-route(app);
-// return app for all non-api routes
-app.get('*', (req, res) => {
-  res.sendFile(root);
-});
+app.use(bodyParser.json())
 
-app.listen(port, () => {
-  console.log(`listening on ${port}`);
-});
+db().then(db => {
+  // yield to the router
+  route(app, db);
+
+  // return app for all non-api routes
+  app.get('*', (req, res) => {
+    res.sendFile(root);
+  });
+
+  app.listen(port, () => {
+    console.log(`listening on ${port}`);
+  });
+})
