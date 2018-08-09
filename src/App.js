@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
 import SignUpLandingPage from './session/SignUpLandingPage';
@@ -26,13 +27,13 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const msp = state => ({
   id: state.session.currentUser,
   currentUser: getCurrentUser(state)
 })
 
-const mapDispatchToProps = dispatch => ({
+const mdp = dispatch => ({
   fetchCurrentUser: () => dispatch(fetchCurrentUser())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(msp, mdp)(App);

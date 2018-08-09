@@ -1,0 +1,67 @@
+.app {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  margin: auto;
+}
+
+.left {
+  padding-top: 120px;
+  width: 420px;
+}
+
+.right {
+  padding-top: 120px;
+  width: 550px;
+}
+
+.right h1 {
+  font-size: 80px;
+  color: white;
+}
+
+.right p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.emailInput {
+  display: flex;
+  margin-top: 20px;
+}
+
+.emailInput input {
+  height: 60px;
+  width: 360px;
+  border: solid 1px #ed32b9;
+  border-radius: 3px;
+  padding: 15px;
+  color: black;
+}
+
+.emailInput input:focus {
+  box-shadow: 0px 0px 2px 2px #ed32b9;
+}
+
+.emailInput button {
+  height: 60px;
+  width: 170px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #21ce99;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.signIn {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.signIn span {
+  color: #ed32b9;
+  text-decoration: underline;
+  cursor: pointer;
+}

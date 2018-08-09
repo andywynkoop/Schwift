@@ -27,3 +27,15 @@ export const removeCurrentUser = () => ({ type: REMOVE_CURRENT_USER });
 export const logout = () => dispatch =>
   axios.delete('/api/session')
     .then(() => dispatch(removeCurrentUser()));
+
+export const RECEIVE_SESSION_VIEW = "RECEIVE_SESSION_VIEW";
+export const receiveSessionView = page => ({
+  type: RECEIVE_SESSION_VIEW,
+  page
+});
+
+export const RECEIVE_SESSION_EMAIL = "RECEIVE_SESSION_EMAIL";
+export const receiveSessionEmail = email => ({
+  type: RECEIVE_SESSION_EMAIL,
+  email
+})

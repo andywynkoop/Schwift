@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_USER, REMOVE_CURRENT_USER } from './session_actions';
+import { RECEIVE_CURRENT_USER, REMOVE_CURRENT_USER } from '../session_actions';
 
 const loading = { currentUser: "Loading" }
 const nullUser = { currentUser: null }

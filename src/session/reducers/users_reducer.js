@@ -1,4 +1,4 @@
-import { RECEIVE_USER, RECEIVE_CURRENT_USER } from './session_actions';
+import { RECEIVE_USER, RECEIVE_CURRENT_USER } from '../session_actions';
 
 export default (state = {}, action) => {
   const { type, user } = action;
