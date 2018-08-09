@@ -12,12 +12,12 @@ app.use(express.static('dist'));
 app.use(cookieParser())
 app.use(bodyParser.json())
 
-db().then(db => {
+db().then(mongoose => {
   // yield to the router
-  route(app, db);
+  route(app, mongoose);
 
   // return app for all non-api routes
-  app.get('*', (req, res) => {
+  app.get('*', (_req, res) => {
     res.sendFile(root);
   });
 

@@ -1,7 +1,9 @@
+require('../models/User');
 const { hash, check, random, login, logout, getSession } = require('../util/auth_utils.js');
 
-module.exports = (app, db) => {
-
+module.exports = (app, mongoose) => {
+  const User = mongoose.model('users');
+ 
   // create a new user and log them in
   app.post('/api/users', async (req, res) => {
     const { user } = req.body;
@@ -12,39 +14,36 @@ module.exports = (app, db) => {
     const token = await random();
     user.sessionToken = token;
     await login(req, res, user);
-    db.collection('users').insert(user, (err, user) => {
-      if (err) res.send(err);
-      res.send(user.ops[0]);
-    });
+    user.workspaceIds = [];
+    const newUser = new User(user);
+    const { err, dbresult } = newUser.save();
+    if (err) res.send(err);
+    res.send(dbresult);
   });
 
   //get current user
   app.get('/api/session', (req, res) => {
     const { sessionToken } = getSession(req);
-    db.collection('users')
-      .find({ sessionToken: sessionToken })
-      .toArray((err, result) => {
-        if (err) res.send(err);
-        res.send(result[0]);
-      });
+    User.findOne({ sessionToken: sessionToken }, (err, user) => {
+      if (err) res.send(err);
+      res.send(user);
+    });
   });
   
   //log in
   app.post('/api/session', async (req, res) => {
     const { email, password } = req.body.user;
-    db.collection('users')
-      .find({ email: email })
-      .toArray(async (err, result) => {
-        userResult = result[0];
-        if (!userResult) return res.send("No User Found");
-        const isPassword = await check(password, userResult.passwordDigest);
-        if (isPassword) {
-          const user = await login(req, res, userResult);
-          res.send(user);
-        } else {
-          res.send('Invalid password')
-        }
-      });
+    User.findOne({ email: email }, async (err, userResult) => {
+      if (err) res.send(err);
+      if (!userResult) return res.send("No User Found");
+      const isPassword = await check(password, userResult.passwordDigest);
+      if (isPassword) {
+        const user = await login(req, res, userResult);
+        res.send(user);
+      } else {
+        res.send('Invalid password')
+      }
+    });
   });
 
   //log out
