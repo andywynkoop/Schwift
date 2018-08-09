@@ -11,6 +11,6 @@ const msp = (state) => ({
 
 const mdp = dispatch => ({
   save: user => dispatch(createUser(user))
-})
-;
+});
+
 export default connect(msp, mdp)(SessionForm)

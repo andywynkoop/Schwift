@@ -3,7 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
 import SignUpLandingPage from './session/SignUpLandingPage';
-import Home from './Home';
+import WorkspaceSelect from './workspace/WorkspaceSelect';
 import { fetchCurrentUser } from './session/session_actions';
 import { getCurrentUser } from './reducers/selectors';
 //remove me later
@@ -20,7 +20,7 @@ class App extends Component {
     return(
      <BrowserRouter>
       <Switch>
-          <Route path="/" component={this.props.currentUser ? Home : SignUpLandingPage} />
+          <Route path="/" component={this.props.currentUser ? WorkspaceSelect : SignUpLandingPage} />
       </Switch>
      </BrowserRouter> 
     )

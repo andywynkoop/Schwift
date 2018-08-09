@@ -1810,7 +1810,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SessionForm__wrapper___VzL3t {\n  background: #000;\n  width: 100%;\n  height: 100vh;\n  padding-top: 60px;\n}\n\n.SessionForm__form___3RrX0 {\n  background: #111;\n  border: solid 1px #ed32b9;\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n  border-radius: 3px;\n  width: 600px;\n  text-align: center;\n  padding: 30px 70px 50px 70px;\n  margin: auto;\n  margin-top: 100px;\n}\n\n.SessionForm__h1___1ybA4 {\n  color: #21ce99;\n  font-size: 32px;\n  margin-bottom: 20px;\n} \n\n.SessionForm__input___cW89X {\n  height: 60px;\n  width: 360px;\n  border: solid 1px #ed32b9;\n  border-radius: 3px;\n  padding: 15px;\n  color: black;\n  margin-bottom: 20px;\n}\n\n.SessionForm__input___cW89X:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}\n\n.SessionForm__input___cW89X::placeholder {\n  text-transform: capitalize;\n}\n\n.SessionForm__btn___1wuo6 {\n  background: #ed32b9;\n  height: 60px;\n  width: 170px;\n  border-radius: 3px;\n  font-size: 18px;\n}\n\n.SessionForm__btn___1wuo6:hover {\n  box-shadow: 0px 0px 2px 2px #21ce99;;\n}", ""]);
+exports.push([module.i, ".SessionForm__wrapper___VzL3t {\n  background: #000;\n  width: 100%;\n  height: 100vh;\n  padding-top: 60px;\n}\n\n.SessionForm__form___3RrX0 {\n  background: #111;\n  border: solid 1px #ed32b9;\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n  border-radius: 3px;\n  width: 600px;\n  text-align: center;\n  padding: 30px 70px 50px 70px;\n  margin: auto;\n  margin-top: 100px;\n}\n\n.SessionForm__h1___1ybA4 {\n  color: #21ce99;\n  font-size: 32px;\n  margin-bottom: 20px;\n} \n\n.SessionForm__input___cW89X {\n  height: 60px;\n  width: 360px;\n  border: solid 1px #ed32b9;\n  border-radius: 3px;\n  padding: 15px;\n  color: black;\n  margin-bottom: 20px;\n}\n\n.SessionForm__input___cW89X:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}\n\n.SessionForm__input___cW89X::placeholder {\n  text-transform: capitalize;\n}\n\n.SessionForm__btn___1wuo6 {\n  background: #ed32b9;\n  height: 60px;\n  width: 170px;\n  border-radius: 3px;\n  font-size: 18px;\n}\n\n.SessionForm__btn___1wuo6:hover {\n  box-shadow: 0px 0px 2px 2px #21ce99;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1864,6 +1864,55 @@ exports.push([module.i, ".SignUpLandingPage__page___u1FWM {\n  width: 100%;\n}",
 // exports
 exports.locals = {
 	"page": "SignUpLandingPage__page___u1FWM"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./src/workspace/css/WorkspaceNav.css":
+/*!******************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6!./src/workspace/css/WorkspaceNav.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".WorkspaceNav__wrapper___B5pjw {\n  width: 100%;\n  height: 60px;\n  position: fixed;\n  background: #111;\n  padding-top: 10px;\n}\n\n.WorkspaceNav__inner___2yavS {\n  width: 980px;\n  margin: auto;\n  display: flex;\n  justify-content: space-between;\n}\n\n.WorkspaceNav__btn___3CLvy {\n  padding: 10px 15px;\n  border-radius: 3px;\n  margin: 0px 3px;\n  background: #21ce99;\n}\n\n.WorkspaceNav__logo___1Ab2s {\n  color: #ed32b9;\n  font-size: 32px;\n  cursor: pointer;\n}\n\n", ""]);
+
+// exports
+exports.locals = {
+	"wrapper": "WorkspaceNav__wrapper___B5pjw",
+	"inner": "WorkspaceNav__inner___2yavS",
+	"btn": "WorkspaceNav__btn___3CLvy",
+	"logo": "WorkspaceNav__logo___1Ab2s"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./src/workspace/css/WorkspaceSelect.css":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6!./src/workspace/css/WorkspaceSelect.css ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".WorkspaceSelect__app___jXcqi {\n  width: 100%;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  width: 980px;\n  margin: auto;\n  padding-top: 120px;\n  display: flex;\n  justify-content: space-between;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  font-size: 24px;\n}\n\n.WorkspaceSelect__left___1KHkp {\n  width: 580px;\n  text-align: center;\n}\n\n.WorkspaceSelect__left___1KHkp h2 {\n  color: #ed32b9;\n  text-align: center;\n  font-size: 18px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n\n.WorkspaceSelect__left___1KHkp h2:hover {\n  color: #21ce99;\n}\n\n.WorkspaceSelect__right___rWMeA {\n  width: 400px;\n}\n\n.WorkspaceSelect__right___rWMeA h1 {\n  color: #21ce99;\n  cursor: pointer;\n  margin-top: 15px;\n}\n\n.WorkspaceSelect__right___rWMeA h1:hover {\n  color: #ed32b9;\n}\n\n.WorkspaceSelect__new___3qhF5 {\n  display: flex;\n  font-size: 20px;\n  margin-top: 20px;\n}\n\n.WorkspaceSelect__new___3qhF5 p {\n  color: #999;\n  margin-right: 5px;\n}\n\n.WorkspaceSelect__new___3qhF5 input {\n  border-radius: 3px;\n  border: solid 1px #ed32b9;\n  color: black;\n}\n\n.WorkspaceSelect__new___3qhF5 input:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}", ""]);
+
+// exports
+exports.locals = {
+	"app": "WorkspaceSelect__app___jXcqi",
+	"main": "WorkspaceSelect__main___3Dgiq",
+	"left": "WorkspaceSelect__left___1KHkp",
+	"right": "WorkspaceSelect__right___rWMeA",
+	"new": "WorkspaceSelect__new___3qhF5"
 };
 
 /***/ }),
@@ -29253,9 +29302,9 @@ var _SignUpLandingPage = __webpack_require__(/*! ./session/SignUpLandingPage */ 
 
 var _SignUpLandingPage2 = _interopRequireDefault(_SignUpLandingPage);
 
-var _Home = __webpack_require__(/*! ./Home */ "./src/Home.js");
+var _WorkspaceSelect = __webpack_require__(/*! ./workspace/WorkspaceSelect */ "./src/workspace/WorkspaceSelect.js");
 
-var _Home2 = _interopRequireDefault(_Home);
+var _WorkspaceSelect2 = _interopRequireDefault(_WorkspaceSelect);
 
 var _session_actions = __webpack_require__(/*! ./session/session_actions */ "./src/session/session_actions.js");
 
@@ -29302,7 +29351,7 @@ var App = function (_Component) {
         _react2.default.createElement(
           _reactRouterDom.Switch,
           null,
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: this.props.currentUser ? _Home2.default : _SignUpLandingPage2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: this.props.currentUser ? _WorkspaceSelect2.default : _SignUpLandingPage2.default })
         )
       );
     }
@@ -29327,73 +29376,6 @@ var mdp = function mdp(dispatch) {
 };
 
 exports.default = (0, _reactRedux.connect)(msp, mdp)(App);
-
-/***/ }),
-
-/***/ "./src/Home.js":
-/*!*********************!*\
-  !*** ./src/Home.js ***!
-  \*********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-
-var _selectors = __webpack_require__(/*! ./reducers/selectors */ "./src/reducers/selectors.js");
-
-var _session_actions = __webpack_require__(/*! ./session/session_actions */ "./src/session/session_actions.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Home = function Home(props) {
-  return _react2.default.createElement(
-    'div',
-    { className: 'home' },
-    _react2.default.createElement(
-      'h1',
-      null,
-      'Home Page'
-    ),
-    _react2.default.createElement(
-      'h3',
-      null,
-      'Hello, ',
-      props.currentUser.username
-    ),
-    _react2.default.createElement(
-      'button',
-      { onClick: props.logout },
-      'Log Out'
-    )
-  );
-};
-
-var msp = function msp(state) {
-  return {
-    currentUser: (0, _selectors.getCurrentUser)(state)
-  };
-};
-
-var mdp = function mdp(dispatch) {
-  return {
-    logout: function logout() {
-      return dispatch((0, _session_actions.logout)());
-    }
-  };
-};
-
-exports.default = (0, _reactRedux.connect)(msp, mdp)(Home);
 
 /***/ }),
 
@@ -29793,7 +29775,7 @@ var SignUpForm = function (_Component) {
               'li',
               { key: idx },
               _react2.default.createElement('input', {
-                type: 'text',
+                type: field === "password" ? "password" : "text",
                 value: _this2.state[field],
                 onChange: _this2.update(field),
                 className: _SessionForm2.default.input,
@@ -29980,6 +29962,7 @@ var mdp = function mdp(dispatch) {
     }
   };
 };
+
 exports.default = (0, _reactRedux.connect)(msp, mdp)(_SessionForm2.default);
 
 /***/ }),
@@ -30196,6 +30179,8 @@ exports.default = function () {
   switch (type) {
     case _session_actions.RECEIVE_SESSION_EMAIL:
       return email;
+    case _session_actions.RECEIVE_CURRENT_USER:
+      return "";
     default:
       return state;
   }
@@ -30263,6 +30248,8 @@ exports.default = function () {
   switch (type) {
     case _session_actions.RECEIVE_SESSION_VIEW:
       return page;
+    case _session_actions.REMOVE_CURRENT_USER:
+      return 0;
     default:
       return state;
   }
@@ -30394,6 +30381,253 @@ var receiveSessionEmail = exports.receiveSessionEmail = function receiveSessionE
     email: email
   };
 };
+
+/***/ }),
+
+/***/ "./src/workspace/WorkspaceNav.js":
+/*!***************************************!*\
+  !*** ./src/workspace/WorkspaceNav.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _WorkspaceNav = __webpack_require__(/*! ./css/WorkspaceNav.css */ "./src/workspace/css/WorkspaceNav.css");
+
+var _WorkspaceNav2 = _interopRequireDefault(_WorkspaceNav);
+
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+var _session_actions = __webpack_require__(/*! ../session/session_actions */ "./src/session/session_actions.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var WorkspaceNav = function WorkspaceNav(_ref) {
+  var logout = _ref.logout;
+  return _react2.default.createElement(
+    'div',
+    { className: _WorkspaceNav2.default.wrapper },
+    _react2.default.createElement(
+      'div',
+      { className: _WorkspaceNav2.default.inner },
+      _react2.default.createElement(
+        'h1',
+        { className: _WorkspaceNav2.default.logo },
+        'Schwift'
+      ),
+      _react2.default.createElement(
+        'button',
+        { onClick: logout, className: _WorkspaceNav2.default.btn },
+        'Log Out'
+      )
+    )
+  );
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    logout: function logout() {
+      return dispatch((0, _session_actions.logout)());
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(null, mdp)(WorkspaceNav);
+
+/***/ }),
+
+/***/ "./src/workspace/WorkspaceSelect.js":
+/*!******************************************!*\
+  !*** ./src/workspace/WorkspaceSelect.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+var _selectors = __webpack_require__(/*! ../reducers/selectors */ "./src/reducers/selectors.js");
+
+var _WorkspaceNav = __webpack_require__(/*! ./WorkspaceNav */ "./src/workspace/WorkspaceNav.js");
+
+var _WorkspaceNav2 = _interopRequireDefault(_WorkspaceNav);
+
+var _WorkspaceSelect = __webpack_require__(/*! ./css/WorkspaceSelect.css */ "./src/workspace/css/WorkspaceSelect.css");
+
+var _WorkspaceSelect2 = _interopRequireDefault(_WorkspaceSelect);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Home = function Home(props) {
+  return _react2.default.createElement(
+    'div',
+    { className: _WorkspaceSelect2.default.app },
+    _react2.default.createElement(_WorkspaceNav2.default, null),
+    _react2.default.createElement(
+      'div',
+      { className: _WorkspaceSelect2.default.main },
+      _react2.default.createElement(
+        'div',
+        { className: _WorkspaceSelect2.default.left },
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Sign in to a Workspace'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Workspace 1'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Workspace 2'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Workspace 3'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Workspace 4'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: _WorkspaceSelect2.default.right },
+        _react2.default.createElement(
+          'div',
+          { className: _WorkspaceSelect2.default.new },
+          _react2.default.createElement(
+            'p',
+            null,
+            'schwift.herokuapp.com/'
+          ),
+          _react2.default.createElement('input', { type: 'text' })
+        ),
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Join this workspace'
+        ),
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Create this workspace'
+        )
+      )
+    )
+  );
+};
+
+var msp = function msp(state) {
+  return {
+    currentUser: (0, _selectors.getCurrentUser)(state)
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    logout: function (_logout) {
+      function logout() {
+        return _logout.apply(this, arguments);
+      }
+
+      logout.toString = function () {
+        return _logout.toString();
+      };
+
+      return logout;
+    }(function () {
+      return dispatch(logout());
+    })
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(msp, mdp)(Home);
+
+/***/ }),
+
+/***/ "./src/workspace/css/WorkspaceNav.css":
+/*!********************************************!*\
+  !*** ./src/workspace/css/WorkspaceNav.css ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./WorkspaceNav.css */ "./node_modules/css-loader/index.js?!./src/workspace/css/WorkspaceNav.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/workspace/css/WorkspaceSelect.css":
+/*!***********************************************!*\
+  !*** ./src/workspace/css/WorkspaceSelect.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./WorkspaceSelect.css */ "./node_modules/css-loader/index.js?!./src/workspace/css/WorkspaceSelect.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ })
 

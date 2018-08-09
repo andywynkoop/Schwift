@@ -1,0 +1,67 @@
+.app {
+  width: 100%;
+}
+
+.main {
+  width: 980px;
+  margin: auto;
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  font-size: 24px;
+}
+
+.left {
+  width: 580px;
+  text-align: center;
+}
+
+.left h2 {
+  color: #ed32b9;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.left h2:hover {
+  color: #21ce99;
+}
+
+.right {
+  width: 400px;
+}
+
+.right h1 {
+  color: #21ce99;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.right h1:hover {
+  color: #ed32b9;
+}
+
+.new {
+  display: flex;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.new p {
+  color: #999;
+  margin-right: 5px;
+}
+
+.new input {
+  border-radius: 3px;
+  border: solid 1px #ed32b9;
+  color: black;
+}
+
+.new input:focus {
+  box-shadow: 0px 0px 2px 2px #ed32b9;
+}

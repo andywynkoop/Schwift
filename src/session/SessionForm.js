@@ -26,7 +26,7 @@ export default class SignUpForm extends Component {
           {fields.map((field, idx) => (
             <li key={idx}>
               <input 
-                type="text" 
+                type={(field === "password") ? "password" : "text"} 
                 value={this.state[field]} 
                 onChange={this.update(field)} 
                 className={style.input}
