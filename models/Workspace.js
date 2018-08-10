@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const UserSchema = require('./Workspace');
+const UserSchema = require('./User');
 
 const workspaceSchema = new Schema({
   name: String,
-  members: [UserSchema]
+  members: [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
 });
 
-mongoose.model('workspaces', workspaceSchema);
+mongoose.model('Workspace', workspaceSchema);
 
 module.exports = workspaceSchema;

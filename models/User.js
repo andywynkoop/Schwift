@@ -9,9 +9,9 @@ const userSchema = new Schema({
   email: String,
   passwordDigest: String,
   sessionToken: String,
-  workspaces: [WorkspaceSchema]
+  workspaces: [{ type: mongoose.Schema.ObjectId, ref: 'Workspace' }]
 });
 
-mongoose.model('users', userSchema);
+mongoose.model('User', userSchema);
 
 module.exports = userSchema;

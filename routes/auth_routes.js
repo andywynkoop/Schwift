@@ -2,7 +2,7 @@ require('../models/User');
 const { hash, check, random, login, logout, getSession } = require('../util/auth_utils.js');
 
 module.exports = (app, mongoose) => {
-  const User = mongoose.model('users');
+  const User = mongoose.model('User');
  
   // create a new user and log them in
   app.post('/api/users', async (req, res) => {
@@ -14,37 +14,37 @@ module.exports = (app, mongoose) => {
     const token = await random();
     user.sessionToken = token;
     await login(req, res, user);
-    user.workspaceIds = [];
-    const newUser = new User(user);
-    newUser.save().then((err, dbresult) => {
+    user.workspaces = [];
+    const userModel = new User(user);
+    userModel.save().then((err, userDB) => {
       if (err) res.send(err);
-      res.send(dbresult);
+      res.send(userDB);
     });
   });
 
   //get current user
   app.get('/api/session', (req, res) => {
     const { sessionToken } = getSession(req);
-    User.findOne({ sessionToken: sessionToken }, (err, user) => {
+    User.findOne({ sessionToken: sessionToken }, (err, userDB) => {
       if (err) res.send(err);
-      res.send(user);
+      res.send(userDB);
     });
   });
   
   //log in
   app.post('/api/session', async (req, res) => {
     const { email, password } = req.body.user;
-    User.findOne({ email: email }, async (err, userResult) => {
+    User.findOne({ email: email }, async (err, userDB) => {
       if (err) res.send(err);
-      if (!userResult) return res.send("No User Found");
-      const isPassword = await check(password, userResult.passwordDigest);
+      if (!userDB) return res.send("No User Found");
+      const isPassword = await check(password, userDB.passwordDigest);
       if (isPassword) {
-        userResult.sessionToken = await random();
-        await new User(userResult).save();
-        const user = await login(req, res, userResult);
-        res.send(user);
+        userDB.sessionToken = await random();
+        await new User(userDB).save();
+        const currentUser = await login(req, res, userDB);
+        res.send(currentUser);
       } else {
-        res.send('Invalid password')
+        res.send('Invalid password');
       }
     });
   });
@@ -52,7 +52,6 @@ module.exports = (app, mongoose) => {
   //log out
   app.delete('/api/session', async (req, res) => {
     await logout(req, res);
-
     res.send('logout');
   });
 }
