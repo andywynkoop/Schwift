@@ -16,9 +16,10 @@ module.exports = (app, mongoose) => {
     await login(req, res, user);
     user.workspaceIds = [];
     const newUser = new User(user);
-    const { err, dbresult } = newUser.save();
-    if (err) res.send(err);
-    res.send(dbresult);
+    newUser.save().then((err, dbresult) => {
+      if (err) res.send(err);
+      res.send(dbresult);
+    });
   });
 
   //get current user
@@ -38,6 +39,8 @@ module.exports = (app, mongoose) => {
       if (!userResult) return res.send("No User Found");
       const isPassword = await check(password, userResult.passwordDigest);
       if (isPassword) {
+        userResult.sessionToken = await random();
+        await new User(userResult).save();
         const user = await login(req, res, userResult);
         res.send(user);
       } else {
@@ -49,6 +52,7 @@ module.exports = (app, mongoose) => {
   //log out
   app.delete('/api/session', async (req, res) => {
     await logout(req, res);
+
     res.send('logout');
   });
 }
