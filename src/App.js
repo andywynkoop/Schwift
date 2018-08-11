@@ -6,6 +6,7 @@ import SignUpLandingPage from './session/SignUpLandingPage';
 import WorkspaceSelect from './workspace/WorkspaceSelect';
 import { fetchCurrentUser } from './session/session_actions';
 import { getCurrentUser } from './reducers/selectors';
+import Workspace from './workspace/Workspace';
 //remove me later
 import axios from 'axios';
 window.axios = axios;
@@ -20,6 +21,7 @@ class App extends Component {
     return(
      <BrowserRouter>
       <Switch>
+          <Route path="/workspace/:id" component={Workspace} />
           <Route path="/" component={this.props.currentUser ? WorkspaceSelect : SignUpLandingPage} />
       </Switch>
      </BrowserRouter> 

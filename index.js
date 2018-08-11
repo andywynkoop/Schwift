@@ -21,6 +21,14 @@ db().then(mongoose => {
     res.sendFile(root);
   });
 
+  app.get('/*', (_req, res) => {
+    res.sendFile(root);
+  });
+
+  app.get('/*/*', (_req, res) => {
+    res.sendFile(root);
+  });
+
   app.listen(port, () => {
     console.log(`listening on ${port}`);
   });

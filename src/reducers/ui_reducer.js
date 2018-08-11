@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import sessionViewReducer from '../session/reducers/session_view_reducer';
 import sessionEmailReducer from '../session/reducers/session_email_reducer';
+import activeWorkspaceReducer from '../workspace/reducers/active_workspace_reducer';
 
 export default combineReducers({
   sessionView: sessionViewReducer,
-  sessionEmail: sessionEmailReducer
+  sessionEmail: sessionEmailReducer,
+  activeWorkspace: activeWorkspaceReducer
 });

@@ -12,9 +12,10 @@
 
 const mongoose = require('mongoose');
 const { mongoUsername, mongoPassword } = require('../config/mongodb');
+const LOCAL_URI = 'mongodb://localhost:27017/schwift';
 const MONGO_URI = `mongodb://${mongoUsername}:${mongoPassword}@ds113942.mlab.com:13942/junefs`;
 
 const connect = () => 
-  mongoose.connect(MONGO_URI, { useNewUrlParser: true });
+  mongoose.connect(LOCAL_URI, { useNewUrlParser: true });
 
 module.exports = connect;

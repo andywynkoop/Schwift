@@ -15,33 +15,42 @@
 }
 
 .left {
-  width: 580px;
+  width: 490px;
   text-align: center;
 }
 
-.left h2 {
+.left h1, .right h1 {
+  margin-bottom: 50px;
+}
+
+.left ul {
+  margin-left: 145px;
+}
+
+.left li {
   color: #ed32b9;
-  text-align: center;
-  font-size: 18px;
+  text-align: left;
+  display: block;
+  font-size: 36px;
   margin-top: 10px;
   cursor: pointer;
 }
 
-.left h2:hover {
+.left li:hover {
   color: #21ce99;
 }
 
 .right {
-  width: 400px;
+  width: 490px;
 }
 
-.right h1 {
+.right h2 {
   color: #21ce99;
   cursor: pointer;
   margin-top: 15px;
 }
 
-.right h1:hover {
+.right h2:hover {
   color: #ed32b9;
 }
 
