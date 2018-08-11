@@ -1,9 +1,9 @@
 .app {
-  width: 150px;
+  width: 300px;
   background: #222;
 }
 
 .app h1 {
   color: #ed32b9;
-  text-shadow: 5px #ed32b9;
+  text-shadow: #ed32b9 5px;
 }

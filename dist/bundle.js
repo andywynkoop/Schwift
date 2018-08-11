@@ -1785,7 +1785,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 150px;\n  background: #222;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 5px #ed32b9;\n}", ""]);
+exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 300px;\n  background: #222;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: #ed32b9 5px;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1885,6 +1885,27 @@ exports.push([module.i, ".SignUpLandingPage__page___u1FWM {\n  width: 100%;\n}",
 // exports
 exports.locals = {
 	"page": "SignUpLandingPage__page___u1FWM"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./src/workspace/css/Workspace.css":
+/*!***************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6!./src/workspace/css/Workspace.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Workspace__app___2l9zy {\n  display: flex;\n}", ""]);
+
+// exports
+exports.locals = {
+	"app": "Workspace__app___2l9zy"
 };
 
 /***/ }),
@@ -47718,6 +47739,10 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Workspace = __webpack_require__(/*! ./css/Workspace.css */ "./src/workspace/css/Workspace.css");
+
+var _Workspace2 = _interopRequireDefault(_Workspace);
+
 var _ChannelIndex = __webpack_require__(/*! ../channel/ChannelIndex */ "./src/channel/ChannelIndex.js");
 
 var _ChannelIndex2 = _interopRequireDefault(_ChannelIndex);
@@ -47731,7 +47756,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function () {
   return _react2.default.createElement(
     'div',
-    null,
+    { className: _Workspace2.default.app },
     _react2.default.createElement(_ChannelIndex2.default, null),
     _react2.default.createElement(_Feed2.default, null)
   );
@@ -48003,6 +48028,36 @@ var mdp = function mdp(dispatch) {
 };
 
 exports.default = (0, _reactRedux.connect)(msp, mdp)(Home);
+
+/***/ }),
+
+/***/ "./src/workspace/css/Workspace.css":
+/*!*****************************************!*\
+  !*** ./src/workspace/css/Workspace.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./Workspace.css */ "./node_modules/css-loader/index.js?!./src/workspace/css/Workspace.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
