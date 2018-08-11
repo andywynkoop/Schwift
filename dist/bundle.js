@@ -1773,6 +1773,27 @@ exports.push([module.i, "body {\n  background: #111;\n  color: #fff;\n}", ""]);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./src/channel/css/ChannelIndex.css":
+/*!****************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6!./src/channel/css/ChannelIndex.css ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 150px;\n  background: #222;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 5px #ed32b9;\n}", ""]);
+
+// exports
+exports.locals = {
+	"app": "ChannelIndex__app___118FP"
+};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./src/session/css/Default.css":
 /*!***********************************************************************!*\
   !*** ./node_modules/css-loader??ref--6!./src/session/css/Default.css ***!
@@ -46526,6 +46547,144 @@ exports.default = (0, _reactRedux.connect)(msp, mdp)(App);
 
 /***/ }),
 
+/***/ "./src/channel/ChannelIndex.js":
+/*!*************************************!*\
+  !*** ./src/channel/ChannelIndex.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ChannelIndex = __webpack_require__(/*! ./css/ChannelIndex.css */ "./src/channel/css/ChannelIndex.css");
+
+var _ChannelIndex2 = _interopRequireDefault(_ChannelIndex);
+
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ChannelIndex = function (_Component) {
+  _inherits(ChannelIndex, _Component);
+
+  function ChannelIndex() {
+    _classCallCheck(this, ChannelIndex);
+
+    return _possibleConstructorReturn(this, (ChannelIndex.__proto__ || Object.getPrototypeOf(ChannelIndex)).apply(this, arguments));
+  }
+
+  _createClass(ChannelIndex, [{
+    key: 'render',
+    value: function render() {
+      var workspace = this.props.workspace;
+
+      if (!workspace) return _react2.default.createElement('div', null);
+      return _react2.default.createElement(
+        'div',
+        { className: _ChannelIndex2.default.app },
+        _react2.default.createElement(
+          'h1',
+          null,
+          workspace.name
+        )
+      );
+    }
+  }]);
+
+  return ChannelIndex;
+}(_react.Component);
+
+var msp = function msp(state) {
+  return {
+    workspace: state.entities.workspaces[state.ui.activeWorkspace]
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {};
+};
+
+exports.default = (0, _reactRedux.connect)(msp, mdp)(ChannelIndex);
+
+/***/ }),
+
+/***/ "./src/channel/css/ChannelIndex.css":
+/*!******************************************!*\
+  !*** ./src/channel/css/ChannelIndex.css ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./ChannelIndex.css */ "./node_modules/css-loader/index.js?!./src/channel/css/ChannelIndex.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/feed/Feed.js":
+/*!**************************!*\
+  !*** ./src/feed/Feed.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement(
+    'div',
+    null,
+    'Feed'
+  );
+};
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -47559,13 +47718,22 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ChannelIndex = __webpack_require__(/*! ../channel/ChannelIndex */ "./src/channel/ChannelIndex.js");
+
+var _ChannelIndex2 = _interopRequireDefault(_ChannelIndex);
+
+var _Feed = __webpack_require__(/*! ../feed/Feed */ "./src/feed/Feed.js");
+
+var _Feed2 = _interopRequireDefault(_Feed);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function () {
   return _react2.default.createElement(
     'div',
     null,
-    ' Workspace Page!'
+    _react2.default.createElement(_ChannelIndex2.default, null),
+    _react2.default.createElement(_Feed2.default, null)
   );
 };
 

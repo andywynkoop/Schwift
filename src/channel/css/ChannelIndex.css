@@ -1,0 +1,9 @@
+.app {
+  width: 150px;
+  background: #222;
+}
+
+.app h1 {
+  color: #ed32b9;
+  text-shadow: 5px #ed32b9;
+}

@@ -1,2 +1,9 @@
 import React from 'react';
-export default () => <div> Workspace Page!</div>;
+import ChannelIndex from '../channel/ChannelIndex';
+import Feed from '../feed/Feed';
+
+export default () => 
+  <div>
+    <ChannelIndex />
+    <Feed />
+  </div>
