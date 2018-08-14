@@ -46594,6 +46594,10 @@ var _ChannelIndex2 = _interopRequireDefault(_ChannelIndex);
 
 var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 
+var _channel_actions = __webpack_require__(/*! ./channel_actions */ "./src/channel/channel_actions.js");
+
+var _workspace_actions = __webpack_require__(/*! ../workspace/workspace_actions */ "./src/workspace/workspace_actions.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46612,6 +46616,15 @@ var ChannelIndex = function (_Component) {
   }
 
   _createClass(ChannelIndex, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.props.setActiveWorkspace(this.props.match.params.workspaceId).then(function () {
+        _this2.props.fetchChannels(_this2.props.workspace._id);
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var workspace = this.props.workspace;
@@ -46623,6 +46636,7 @@ var ChannelIndex = function (_Component) {
         _react2.default.createElement(
           'h1',
           null,
+          'workspace: ',
           workspace.name
         )
       );
@@ -46639,10 +46653,47 @@ var msp = function msp(state) {
 };
 
 var mdp = function mdp(dispatch) {
-  return {};
+  return {
+    setActiveWorkspace: function setActiveWorkspace(workspaceId) {
+      return dispatch((0, _workspace_actions.receiveActiveWorkspace)(workspaceId));
+    },
+    fetchChannels: function fetchChannels(workspaceId) {
+      return dispatch((0, _channel_actions.fetchChannels)(workspaceId));
+    },
+    selectChannel: function selectChannel(channelId) {
+      return dispatch((0, _channel_actions.selectChannel)(channelId));
+    }
+  };
 };
 
 exports.default = (0, _reactRedux.connect)(msp, mdp)(ChannelIndex);
+
+/***/ }),
+
+/***/ "./src/channel/channel_actions.js":
+/*!****************************************!*\
+  !*** ./src/channel/channel_actions.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var fetchChannels = exports.fetchChannels = function fetchChannels(workspaceId) {
+  return function (dispatch) {
+    return console.log('fetching channels for ', workspaceId);
+  };
+};
+
+var selectChannel = exports.selectChannel = function selectChannel(channelId) {
+  return function (dispatch) {
+    return console.log('selecting channel');
+  };
+};
 
 /***/ }),
 
@@ -46746,14 +46797,13 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var configureStore = function configureStore() {
-  return (0, _redux.createStore)(_root_reducer2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, _reduxLogger2.default));
-};
+var store = (0, _redux.createStore)(_root_reducer2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, _reduxLogger2.default));
+window.store = store;
 
 document.addEventListener('DOMContentLoaded', function () {
   _reactDom2.default.render(_react2.default.createElement(
     _reactRedux.Provider,
-    { store: configureStore() },
+    { store: store },
     _react2.default.createElement(_App2.default, null)
   ), document.getElementById('root'));
 });

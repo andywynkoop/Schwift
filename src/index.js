@@ -7,11 +7,12 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import App from './App';
 
-const configureStore = () => createStore(rootReducer, applyMiddleware(thunk, logger))
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
+window.store = store;
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Provider store={configureStore()}>
+    <Provider store={store}>
       <App />
     </Provider>
     ,document.getElementById('root')
