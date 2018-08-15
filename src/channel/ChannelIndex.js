@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { fetchChannels, selectChannel } from './channel_actions';
 import { receiveActiveWorkspace } from '../workspace/workspace_actions';
+import { setModal } from '../modal/modal_actions';
 
 class ChannelIndex extends Component {
   componentDidMount() {
@@ -15,17 +16,17 @@ class ChannelIndex extends Component {
     }
   }
   render() {
-    const { workspace } = this.props;
+    const { workspace, openNewChannel } = this.props;
     if (!workspace) return <div />;
     return(
       <div className={style.app}>
         <h1>{workspace.name}</h1>
         <div className={style.channelHeader}>
           <h2>Channels</h2>
-          <button>⊕</button>
+          <button onClick={openNewChannel}>⊕</button>
         </div>
         
-        {workspace.channels.map(channel => <h3>{"# "}{channel.name}</h3>)}
+        {workspace.channels.map(channel => <h3 key={channel._id}>{"# "}{channel.name}</h3>)}
         <div className={style.channelHeader}>
           <h2>Direct Messages</h2>
           <button>⊕</button>
@@ -42,7 +43,8 @@ const msp = state => ({
 const mdp = dispatch => ({
   setActiveWorkspace: (workspaceId) => dispatch(receiveActiveWorkspace(workspaceId)),
   fetchChannels: (workspaceId) => dispatch(fetchChannels(workspaceId)),
-  selectChannel: (channelId) => dispatch(selectChannel(channelId))
+  selectChannel: (channelId) => dispatch(selectChannel(channelId)),
+  openNewChannel: () => dispatch(setModal("CREATE_CHANNEL"))
 });
 
 export default connect(msp, mdp)(withRouter(ChannelIndex));

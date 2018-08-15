@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchWorkspace } from './workspace_actions';
 import style from './css/Workspace.css';
 import ChannelIndex from '../channel/ChannelIndex';
+import NewChannelModal from '../channel/NewChannelModal'
 import Feed from '../feed/Feed';
 
 class Workspace extends Component {
@@ -14,7 +15,10 @@ class Workspace extends Component {
     return(
       <div className={style.app}>
         <ChannelIndex />
-        <Feed />
+        <div className={style.right}>
+          <Feed />
+          <NewChannelModal />
+        </div>
       </div>
     )
   }

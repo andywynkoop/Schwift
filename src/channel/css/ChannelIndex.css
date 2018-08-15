@@ -10,6 +10,7 @@
   text-transform: capitalize;
   font-size: 18px;
   padding: 0px 25px;
+  margin-bottom: 10px;
 }
 
 .channelHeader {
@@ -28,7 +29,7 @@
 .channelHeader button {
   background: none;
   border: none;
-  font-size: 32px;
+  font-size: 28px;
   color: #21ce99;
   text-shadow: 0 0 25px #21ce99;
 }

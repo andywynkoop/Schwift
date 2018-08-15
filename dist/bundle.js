@@ -1766,7 +1766,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/li
 
 
 // module
-exports.push([module.i, "body {\n  background: #111;\n  color: #fff;\n  font-family: 'Lato', sans-serif;\n}", ""]);
+exports.push([module.i, "body {\n  background: #111;\n  color: #fff;\n  font-family: 'Lato', sans-serif;\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -1785,12 +1785,35 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 230px;\n  background: #222;\n  height: 100vh;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  text-transform: capitalize;\n  font-size: 18px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi {\n  display: flex;\n  justify-content: space-between;\n}\n\n.ChannelIndex__app___118FP h2 {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  text-transform: capitalize;\n  font-size: 16px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi button {\n  background: none;\n  border: none;\n  font-size: 32px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:hover, .ChannelIndex__channelHeader___kdXgi h2:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:focus {\n  outline: 0;\n}\n\n.ChannelIndex__app___118FP h3 {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  text-transform: capitalize;\n  font-size: 14px;\n  margin: 0;\n  padding: 5px 25px;\n}\n\n.ChannelIndex__app___118FP h3:hover {\n  background: #111;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 230px;\n  background: #222;\n  height: 100vh;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  text-transform: capitalize;\n  font-size: 18px;\n  padding: 0px 25px;\n  margin-bottom: 10px;\n}\n\n.ChannelIndex__channelHeader___kdXgi {\n  display: flex;\n  justify-content: space-between;\n}\n\n.ChannelIndex__app___118FP h2 {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  text-transform: capitalize;\n  font-size: 16px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi button {\n  background: none;\n  border: none;\n  font-size: 28px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:hover, .ChannelIndex__channelHeader___kdXgi h2:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:focus {\n  outline: 0;\n}\n\n.ChannelIndex__app___118FP h3 {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  text-transform: capitalize;\n  font-size: 14px;\n  margin: 0;\n  padding: 5px 25px;\n}\n\n.ChannelIndex__app___118FP h3:hover {\n  background: #111;\n  cursor: pointer;\n}", ""]);
 
 // exports
 exports.locals = {
 	"app": "ChannelIndex__app___118FP",
 	"channelHeader": "ChannelIndex__channelHeader___kdXgi"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./src/channel/css/NewChannelModal.css":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6!./src/channel/css/NewChannelModal.css ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "div.NewChannelModal__open___3YP_Z, div.NewChannelModal__closed___1Htjz {\n  position: absolute;\n  top: 0;\n  z-index: 1;\n  height: 100vh;\n  transition: 0.25s;\n  overflow: hidden;\n}\n\n.NewChannelModal__open___3YP_Z {\n  width: 100vw;\n  background: #333;\n}\n\n.NewChannelModal__closed___1Htjz {\n  width: 0px;\n}\n\n.NewChannelModal__closeButton___9BmyS {\n  background: none;\n  border: none;\n  font-size: 28px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n\n.NewChannelModal__closeButton___9BmyS:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.NewChannelModal__closeButton___9BmyS:focus {\n  outline: none;\n}", ""]);
+
+// exports
+exports.locals = {
+	"open": "NewChannelModal__open___3YP_Z",
+	"closed": "NewChannelModal__closed___1Htjz",
+	"closeButton": "NewChannelModal__closeButton___9BmyS"
 };
 
 /***/ }),
@@ -46600,6 +46623,8 @@ var _channel_actions = __webpack_require__(/*! ./channel_actions */ "./src/chann
 
 var _workspace_actions = __webpack_require__(/*! ../workspace/workspace_actions */ "./src/workspace/workspace_actions.js");
 
+var _modal_actions = __webpack_require__(/*! ../modal/modal_actions */ "./src/modal/modal_actions.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46632,7 +46657,9 @@ var ChannelIndex = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var workspace = this.props.workspace;
+      var _props = this.props,
+          workspace = _props.workspace,
+          openNewChannel = _props.openNewChannel;
 
       if (!workspace) return _react2.default.createElement('div', null);
       return _react2.default.createElement(
@@ -46653,14 +46680,14 @@ var ChannelIndex = function (_Component) {
           ),
           _react2.default.createElement(
             'button',
-            null,
+            { onClick: openNewChannel },
             '\u2295'
           )
         ),
         workspace.channels.map(function (channel) {
           return _react2.default.createElement(
             'h3',
-            null,
+            { key: channel._id },
             "# ",
             channel.name
           );
@@ -46702,11 +46729,99 @@ var mdp = function mdp(dispatch) {
     },
     selectChannel: function selectChannel(channelId) {
       return dispatch((0, _channel_actions.selectChannel)(channelId));
+    },
+    openNewChannel: function openNewChannel() {
+      return dispatch((0, _modal_actions.setModal)("CREATE_CHANNEL"));
     }
   };
 };
 
 exports.default = (0, _reactRedux.connect)(msp, mdp)((0, _reactRouterDom.withRouter)(ChannelIndex));
+
+/***/ }),
+
+/***/ "./src/channel/NewChannelModal.js":
+/*!****************************************!*\
+  !*** ./src/channel/NewChannelModal.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+var _NewChannelModal = __webpack_require__(/*! ./css/NewChannelModal.css */ "./src/channel/css/NewChannelModal.css");
+
+var _NewChannelModal2 = _interopRequireDefault(_NewChannelModal);
+
+var _modal_actions = __webpack_require__(/*! ../modal/modal_actions */ "./src/modal/modal_actions.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NewChannelModal = function (_Component) {
+  _inherits(NewChannelModal, _Component);
+
+  function NewChannelModal() {
+    _classCallCheck(this, NewChannelModal);
+
+    return _possibleConstructorReturn(this, (NewChannelModal.__proto__ || Object.getPrototypeOf(NewChannelModal)).apply(this, arguments));
+  }
+
+  _createClass(NewChannelModal, [{
+    key: 'render',
+    value: function render() {
+      console.log(this.props.modal);
+      return _react2.default.createElement(
+        'div',
+        { className: _NewChannelModal2.default.open },
+        'New Channel Modal',
+        _react2.default.createElement(
+          'button',
+          { className: _NewChannelModal2.default.closeButton, onClick: this.props.close },
+          '\u24E7'
+        )
+      );
+    }
+  }]);
+
+  return NewChannelModal;
+}(_react.Component);
+
+var msp = function msp(state) {
+  return {
+    modal: state.ui.modal === "CREATE_CHANNEL"
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    close: function close() {
+      return dispatch((0, _modal_actions.closeModal)());
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(msp, mdp)(NewChannelModal);
+
+// this.props.modal ? style.open : style.closed
 
 /***/ }),
 
@@ -46746,6 +46861,36 @@ var selectChannel = exports.selectChannel = function selectChannel(channelId) {
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./ChannelIndex.css */ "./node_modules/css-loader/index.js?!./src/channel/css/ChannelIndex.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/channel/css/NewChannelModal.css":
+/*!*********************************************!*\
+  !*** ./src/channel/css/NewChannelModal.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./NewChannelModal.css */ "./node_modules/css-loader/index.js?!./src/channel/css/NewChannelModal.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -46847,6 +46992,70 @@ document.addEventListener('DOMContentLoaded', function () {
     _react2.default.createElement(_App2.default, null)
   ), document.getElementById('root'));
 });
+
+/***/ }),
+
+/***/ "./src/modal/modal_actions.js":
+/*!************************************!*\
+  !*** ./src/modal/modal_actions.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var OPEN_MODAL = exports.OPEN_MODAL = "OPEN_MODAL";
+var setModal = exports.setModal = function setModal(modal) {
+  return {
+    type: OPEN_MODAL,
+    modal: modal
+  };
+};
+
+var CLOSE_MODAL = exports.CLOSE_MODAL = "CLOSE_MODAL";
+var closeModal = exports.closeModal = function closeModal() {
+  return {
+    type: CLOSE_MODAL
+  };
+};
+
+/***/ }),
+
+/***/ "./src/modal/modal_reducer.js":
+/*!************************************!*\
+  !*** ./src/modal/modal_reducer.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _modal_actions = __webpack_require__(/*! ./modal_actions */ "./src/modal/modal_actions.js");
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var action = arguments[1];
+  var type = action.type,
+      modal = action.modal;
+
+  switch (type) {
+    case _modal_actions.OPEN_MODAL:
+      return modal;
+    case _modal_actions.CLOSE_MODAL:
+      return null;
+    default:
+      return state;
+  }
+};
 
 /***/ }),
 
@@ -46970,12 +47179,17 @@ var _active_workspace_reducer = __webpack_require__(/*! ../workspace/reducers/ac
 
 var _active_workspace_reducer2 = _interopRequireDefault(_active_workspace_reducer);
 
+var _modal_reducer = __webpack_require__(/*! ../modal/modal_reducer */ "./src/modal/modal_reducer.js");
+
+var _modal_reducer2 = _interopRequireDefault(_modal_reducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
   sessionView: _session_view_reducer2.default,
   sessionEmail: _session_email_reducer2.default,
-  activeWorkspace: _active_workspace_reducer2.default
+  activeWorkspace: _active_workspace_reducer2.default,
+  modal: _modal_reducer2.default
 });
 
 /***/ }),
@@ -47843,6 +48057,10 @@ var _ChannelIndex = __webpack_require__(/*! ../channel/ChannelIndex */ "./src/ch
 
 var _ChannelIndex2 = _interopRequireDefault(_ChannelIndex);
 
+var _NewChannelModal = __webpack_require__(/*! ../channel/NewChannelModal */ "./src/channel/NewChannelModal.js");
+
+var _NewChannelModal2 = _interopRequireDefault(_NewChannelModal);
+
 var _Feed = __webpack_require__(/*! ../feed/Feed */ "./src/feed/Feed.js");
 
 var _Feed2 = _interopRequireDefault(_Feed);
@@ -47876,7 +48094,12 @@ var Workspace = function (_Component) {
         'div',
         { className: _Workspace2.default.app },
         _react2.default.createElement(_ChannelIndex2.default, null),
-        _react2.default.createElement(_Feed2.default, null)
+        _react2.default.createElement(
+          'div',
+          { className: _Workspace2.default.right },
+          _react2.default.createElement(_Feed2.default, null),
+          _react2.default.createElement(_NewChannelModal2.default, null)
+        )
       );
     }
   }]);
