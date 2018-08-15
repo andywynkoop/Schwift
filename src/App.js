@@ -16,7 +16,6 @@ class App extends Component {
     this.props.fetchCurrentUser();
   }
   render() {
-    console.log(this.props.currentUser)
     if (this.props.id === "Loading") return <div/>
     return(
      <BrowserRouter>

@@ -27,3 +27,7 @@ export const createWorkspace = (workspace, user) => dispatch =>
 export const joinWorkspace = (workspaceId, user) => dispatch =>
   axios.patch(`/api/workspace/${workspaceId}`, { user })
     .then(({ data: workspace }) => dispatch(receiveWorkspace(workspace)));
+
+export const fetchWorkspace = workspaceId => dispatch =>
+  axios.get(`/api/workspace/${workspaceId}`)
+    .then(({ data: workspace }) => dispatch(receiveWorkspace(workspace)));

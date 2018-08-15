@@ -47,7 +47,7 @@ module.exports = (app, mongoose) => {
   //fetch a single workspace by _id
   app.get('/api/workspace/:workspaceId', (req, res) => {
     const { workspaceId } = req.params;
-    Workspace.findOne({ _id: workspaceId }).exec((err, workspaceDB) => {
+    Workspace.findOne({ _id: workspaceId }).populate('channels').exec((err, workspaceDB) => {
       if (err) res.send(err);
       res.send(workspaceDB);
     });

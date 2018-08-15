@@ -25,14 +25,4 @@ module.exports = (app, mongoose) => {
       });
     });
   });
-  //fetch all channels by workspace id
-  app.get('/api/channels', (req, res) => {
-    console.log('================================================')
-    const { workspaceId, userId } = req.params;
-
-    Channel.find({ workspace: workspaceId }).where({ members: userId }).exec((err, channelsDB) => {
-      if (err) res.send(err);
-      res.send(channelsDB);
-    });
-  });
 }

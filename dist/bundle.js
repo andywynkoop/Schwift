@@ -1766,7 +1766,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/li
 
 
 // module
-exports.push([module.i, "body {\n  background: #111;\n  color: #fff;\n}", ""]);
+exports.push([module.i, "body {\n  background: #111;\n  color: #fff;\n  font-family: 'Lato', sans-serif;\n}", ""]);
 
 // exports
 
@@ -1785,11 +1785,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 300px;\n  background: #222;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: #ed32b9 5px;\n}", ""]);
+exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 230px;\n  background: #222;\n  height: 100vh;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  text-transform: capitalize;\n  font-size: 18px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi {\n  display: flex;\n  justify-content: space-between;\n}\n\n.ChannelIndex__app___118FP h2 {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  text-transform: capitalize;\n  font-size: 16px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi button {\n  background: none;\n  border: none;\n  font-size: 32px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:hover, .ChannelIndex__channelHeader___kdXgi h2:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:focus {\n  outline: 0;\n}\n\n.ChannelIndex__app___118FP h3 {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  text-transform: capitalize;\n  font-size: 14px;\n  margin: 0;\n  padding: 5px 25px;\n}\n\n.ChannelIndex__app___118FP h3:hover {\n  background: #111;\n  cursor: pointer;\n}", ""]);
 
 // exports
 exports.locals = {
-	"app": "ChannelIndex__app___118FP"
+	"app": "ChannelIndex__app___118FP",
+	"channelHeader": "ChannelIndex__channelHeader___kdXgi"
 };
 
 /***/ }),
@@ -46531,7 +46532,6 @@ var App = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.props.currentUser);
       if (this.props.id === "Loading") return _react2.default.createElement('div', null);
       return _react2.default.createElement(
         _reactRouterDom.BrowserRouter,
@@ -46594,6 +46594,8 @@ var _ChannelIndex2 = _interopRequireDefault(_ChannelIndex);
 
 var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
 var _channel_actions = __webpack_require__(/*! ./channel_actions */ "./src/channel/channel_actions.js");
 
 var _workspace_actions = __webpack_require__(/*! ../workspace/workspace_actions */ "./src/workspace/workspace_actions.js");
@@ -46618,11 +46620,14 @@ var ChannelIndex = function (_Component) {
   _createClass(ChannelIndex, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var _this2 = this;
-
-      this.props.setActiveWorkspace(this.props.match.params.workspaceId).then(function () {
-        _this2.props.fetchChannels(_this2.props.workspace._id);
-      });
+      this.props.setActiveWorkspace(this.props.match.params.id);
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      if (!prevProps.workspace) {
+        this.props.fetchChannels(this.props.workspace._id);
+      }
     }
   }, {
     key: 'render',
@@ -46636,8 +46641,43 @@ var ChannelIndex = function (_Component) {
         _react2.default.createElement(
           'h1',
           null,
-          'workspace: ',
           workspace.name
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: _ChannelIndex2.default.channelHeader },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Channels'
+          ),
+          _react2.default.createElement(
+            'button',
+            null,
+            '\u2295'
+          )
+        ),
+        workspace.channels.map(function (channel) {
+          return _react2.default.createElement(
+            'h3',
+            null,
+            "# ",
+            channel.name
+          );
+        }),
+        _react2.default.createElement(
+          'div',
+          { className: _ChannelIndex2.default.channelHeader },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Direct Messages'
+          ),
+          _react2.default.createElement(
+            'button',
+            null,
+            '\u2295'
+          )
         )
       );
     }
@@ -46666,7 +46706,7 @@ var mdp = function mdp(dispatch) {
   };
 };
 
-exports.default = (0, _reactRedux.connect)(msp, mdp)(ChannelIndex);
+exports.default = (0, _reactRedux.connect)(msp, mdp)((0, _reactRouterDom.withRouter)(ChannelIndex));
 
 /***/ }),
 
@@ -47785,9 +47825,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+var _workspace_actions = __webpack_require__(/*! ./workspace_actions */ "./src/workspace/workspace_actions.js");
 
 var _Workspace = __webpack_require__(/*! ./css/Workspace.css */ "./src/workspace/css/Workspace.css");
 
@@ -47803,14 +47849,50 @@ var _Feed2 = _interopRequireDefault(_Feed);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-  return _react2.default.createElement(
-    'div',
-    { className: _Workspace2.default.app },
-    _react2.default.createElement(_ChannelIndex2.default, null),
-    _react2.default.createElement(_Feed2.default, null)
-  );
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Workspace = function (_Component) {
+  _inherits(Workspace, _Component);
+
+  function Workspace() {
+    _classCallCheck(this, Workspace);
+
+    return _possibleConstructorReturn(this, (Workspace.__proto__ || Object.getPrototypeOf(Workspace)).apply(this, arguments));
+  }
+
+  _createClass(Workspace, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.props.fetchWorkspace();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: _Workspace2.default.app },
+        _react2.default.createElement(_ChannelIndex2.default, null),
+        _react2.default.createElement(_Feed2.default, null)
+      );
+    }
+  }]);
+
+  return Workspace;
+}(_react.Component);
+
+var mdp = function mdp(dispatch, props) {
+  return {
+    fetchWorkspace: function fetchWorkspace() {
+      return dispatch((0, _workspace_actions.fetchWorkspace)(props.match.params.id));
+    }
+  };
 };
+
+exports.default = (0, _reactRedux.connect)(null, mdp)(Workspace);
 
 /***/ }),
 
@@ -48239,7 +48321,7 @@ exports.default = function () {
       });
       return newState;
     case _workspace_actions.RECEIVE_WORKSPACE:
-      return Object.assign(state, _defineProperty({}, workspace._id, workspace));
+      return Object.assign({}, state, _defineProperty({}, workspace._id, workspace));
     default:
       return state;
   }
@@ -48260,7 +48342,7 @@ exports.default = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.joinWorkspace = exports.createWorkspace = exports.receiveWorkspace = exports.RECEIVE_WORKSPACE = exports.receiveActiveWorkspace = exports.RECEIVE_ACTIVE_WORKSPACE = exports.fetchWorkspaces = exports.receiveWorkspaces = exports.RECEIVE_WORKSPACES = undefined;
+exports.fetchWorkspace = exports.joinWorkspace = exports.createWorkspace = exports.receiveWorkspace = exports.RECEIVE_WORKSPACE = exports.receiveActiveWorkspace = exports.RECEIVE_ACTIVE_WORKSPACE = exports.fetchWorkspaces = exports.receiveWorkspaces = exports.RECEIVE_WORKSPACES = undefined;
 
 var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
@@ -48311,6 +48393,15 @@ var joinWorkspace = exports.joinWorkspace = function joinWorkspace(workspaceId, 
   return function (dispatch) {
     return _axios2.default.patch("/api/workspace/" + workspaceId, { user: user }).then(function (_ref2) {
       var workspace = _ref2.data;
+      return dispatch(receiveWorkspace(workspace));
+    });
+  };
+};
+
+var fetchWorkspace = exports.fetchWorkspace = function fetchWorkspace(workspaceId) {
+  return function (dispatch) {
+    return _axios2.default.get("/api/workspace/" + workspaceId).then(function (_ref3) {
+      var workspace = _ref3.data;
       return dispatch(receiveWorkspace(workspace));
     });
   };

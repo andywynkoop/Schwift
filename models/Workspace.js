@@ -4,7 +4,8 @@ const UserSchema = require('./User');
 
 const workspaceSchema = new Schema({
   name: String,
-  members: [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
+  members: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
+  channels: [{ type: mongoose.Schema.ObjectId, ref: 'Channel' }]
 });
 
 mongoose.model('Workspace', workspaceSchema);
