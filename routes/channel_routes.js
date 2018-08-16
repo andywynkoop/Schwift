@@ -21,7 +21,9 @@ module.exports = (app, mongoose) => {
         channelDB.members.push(userDB._id);
         await userDB.save();
         channelDB = await channelDB.save();
-        res.send(channelDB);
+        Workspace.findOne({ _id: workspaceId }).populate('channels').exec((err, workspaceDB) => {
+          res.send(workspaceDB);
+        });
       });
     });
   });

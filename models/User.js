@@ -9,7 +9,8 @@ const userSchema = new Schema({
   email: String,
   passwordDigest: String,
   sessionToken: String,
-  workspaces: [{ type: mongoose.Schema.ObjectId, ref: 'Workspace' }]
+  workspaces: [{ type: mongoose.Schema.ObjectId, ref: 'Workspace' }],
+  channels: [{ type: mongoose.Schema.ObjectId, ref: 'Channel' }]
 });
 
 mongoose.model('User', userSchema);

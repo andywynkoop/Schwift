@@ -1766,7 +1766,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/li
 
 
 // module
-exports.push([module.i, "body {\n  background: #111;\n  color: #fff;\n  font-family: 'Lato', sans-serif;\n  margin: 0;\n}", ""]);
+exports.push([module.i, "body {\n  background: #111;\n  color: #fff;\n  font-family: 'Lato', sans-serif;\n  margin: 0;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n}\n\nli {\n  text-decoration: none;\n  list-style: none;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nul,\nli,\nbutton,\ni,\ndiv,\np,\ninput,\ntextarea,\nspan {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  box-sizing: border-box;\n}", ""]);
 
 // exports
 
@@ -1785,7 +1785,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 230px;\n  background: #222;\n  height: 100vh;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  text-transform: capitalize;\n  font-size: 18px;\n  padding: 0px 25px;\n  margin-bottom: 10px;\n}\n\n.ChannelIndex__channelHeader___kdXgi {\n  display: flex;\n  justify-content: space-between;\n}\n\n.ChannelIndex__app___118FP h2 {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  text-transform: capitalize;\n  font-size: 16px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi button {\n  background: none;\n  border: none;\n  font-size: 28px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:hover, .ChannelIndex__channelHeader___kdXgi h2:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:focus {\n  outline: 0;\n}\n\n.ChannelIndex__app___118FP h3 {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  text-transform: capitalize;\n  font-size: 14px;\n  margin: 0;\n  padding: 5px 25px;\n}\n\n.ChannelIndex__app___118FP h3:hover {\n  background: #111;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 230px;\n  background: #222;\n  height: 100vh;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  text-transform: capitalize;\n  font-size: 18px;\n  padding: 0px 25px;\n  margin-bottom: 5px;\n}\n\n.ChannelIndex__channelHeader___kdXgi {\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  margin: 10px 0px;\n}\n\n.ChannelIndex__app___118FP h2 {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  text-transform: capitalize;\n  font-size: 16px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi button {\n  background: none;\n  border: none;\n  color: #21ce99;\n  font-size: 26px;\n  position: absolute;\n  right: 5px;\n  top: -6px;\n  text-shadow: 0 0 25px #21ce99;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:hover, .ChannelIndex__channelHeader___kdXgi h2:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:focus {\n  outline: 0;\n}\n\n.ChannelIndex__app___118FP h3 {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  text-transform: capitalize;\n  font-size: 14px;\n  margin: 0;\n  padding: 5px 25px;\n}\n\n.ChannelIndex__app___118FP h3:hover {\n  background: #111;\n  cursor: pointer;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1807,13 +1807,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "div.NewChannelModal__open___3YP_Z, div.NewChannelModal__closed___1Htjz {\n  position: absolute;\n  top: 0;\n  z-index: 1;\n  height: 100vh;\n  transition: 0.25s;\n  overflow: hidden;\n}\n\n.NewChannelModal__open___3YP_Z {\n  width: 100vw;\n  background: #333;\n}\n\n.NewChannelModal__closed___1Htjz {\n  width: 0px;\n}\n\n.NewChannelModal__closeButton___9BmyS {\n  background: none;\n  border: none;\n  font-size: 28px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n\n.NewChannelModal__closeButton___9BmyS:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.NewChannelModal__closeButton___9BmyS:focus {\n  outline: none;\n}", ""]);
+exports.push([module.i, "div.NewChannelModal__open___3YP_Z, div.NewChannelModal__closed___1Htjz {\n  position: absolute;\n  top: 0;\n  z-index: 1;\n  height: 100vh;\n  transition: 0.25s;\n  overflow: hidden;\n}\n\n.NewChannelModal__open___3YP_Z {\n  width: 70vw;\n  background: #333;\n}\n\n.NewChannelModal__closed___1Htjz {\n  width: 0px;\n}\n\n.NewChannelModal__closeButton___9BmyS {\n  background: none;\n  border: none;\n  font-size: 28px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n\n.NewChannelModal__closeButton___9BmyS:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.NewChannelModal__closeButton___9BmyS:focus {\n  outline: none;\n}\n\n.NewChannelModal__modal___aGp-L {\n  width: 600px;\n  margin: auto;\n  padding-top: 50px;\n}\n\n.NewChannelModal__modal___aGp-L h1 {\n  color: #fff;\n  margin-bottom: 10px;\n}\n\n.NewChannelModal__modal___aGp-L p {\n  color: #aaa;\n  margin-bottom: 20px;\n}\n\n.NewChannelModal__modal___aGp-L h4 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  margin: 0;\n  margin-bottom: 10px;\n}\n\n.NewChannelModal__modal___aGp-L input {\n  height: 40px;\n  width: 600px;\n  padding: 10px;\n  font-size: 18px;\n  border: none;\n  border-radius: 3px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n}\n\n.NewChannelModal__formButtons___1MyZT {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 50px;\n}\n\n.NewChannelModal__formButtons___1MyZT button {\n  height: 40px;\n  border-radius: 3px;\n  padding: 10px;\n  background: none;\n  font-size: 18px;\n  cursor: pointer;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(1) {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  margin-right: 10px;\n  border: solid 1px #ed32b9;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(1):hover {\n  box-shadow: 0 0 10px #ed32b9;\n}\n\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(2) {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  border: solid 1px #21ce99;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(2):hover {\n  box-shadow: 0 0 10px #21ce99;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"open": "NewChannelModal__open___3YP_Z",
 	"closed": "NewChannelModal__closed___1Htjz",
-	"closeButton": "NewChannelModal__closeButton___9BmyS"
+	"closeButton": "NewChannelModal__closeButton___9BmyS",
+	"modal": "NewChannelModal__modal___aGp-L",
+	"formButtons": "NewChannelModal__formButtons___1MyZT"
 };
 
 /***/ }),
@@ -1970,7 +1972,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".WorkspaceSelect__app___jXcqi {\n  width: 100%;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  width: 980px;\n  margin: auto;\n  padding-top: 120px;\n  display: flex;\n  justify-content: space-between;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  font-size: 24px;\n}\n\n.WorkspaceSelect__left___1KHkp {\n  width: 490px;\n  text-align: center;\n}\n\n.WorkspaceSelect__left___1KHkp h1, .WorkspaceSelect__right___rWMeA h1 {\n  margin-bottom: 50px;\n}\n\n.WorkspaceSelect__left___1KHkp ul {\n  margin-left: 145px;\n}\n\n.WorkspaceSelect__left___1KHkp li {\n  color: #ed32b9;\n  text-align: left;\n  display: block;\n  font-size: 36px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n\n.WorkspaceSelect__left___1KHkp li:hover {\n  color: #21ce99;\n}\n\n.WorkspaceSelect__right___rWMeA {\n  width: 490px;\n}\n\n.WorkspaceSelect__right___rWMeA h2 {\n  color: #21ce99;\n  cursor: pointer;\n  margin-top: 15px;\n}\n\n.WorkspaceSelect__right___rWMeA h2:hover {\n  color: #ed32b9;\n}\n\n.WorkspaceSelect__new___3qhF5 {\n  display: flex;\n  font-size: 20px;\n  margin-top: 20px;\n}\n\n.WorkspaceSelect__new___3qhF5 p {\n  color: #999;\n  margin-right: 5px;\n}\n\n.WorkspaceSelect__new___3qhF5 input {\n  border-radius: 3px;\n  border: solid 1px #ed32b9;\n  color: black;\n}\n\n.WorkspaceSelect__new___3qhF5 input:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}", ""]);
+exports.push([module.i, ".WorkspaceSelect__app___jXcqi {\n  width: 100%;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  width: 980px;\n  margin: auto;\n  padding-top: 120px;\n  display: flex;\n  justify-content: space-between;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  font-size: 24px;\n}\n\n.WorkspaceSelect__left___1KHkp {\n  width: 490px;\n  text-align: center;\n}\n\n.WorkspaceSelect__left___1KHkp > h1, .WorkspaceSelect__right___rWMeA > h1 {\n  margin-bottom: 50px;\n  font-size: 32px;\n}\n\n.WorkspaceSelect__left___1KHkp ul {\n  margin-left: 145px;\n}\n\n.WorkspaceSelect__left___1KHkp li {\n  color: #ed32b9;\n  text-align: left;\n  display: block;\n  font-size: 36px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n\n.WorkspaceSelect__left___1KHkp li:hover {\n  color: #21ce99;\n}\n\n.WorkspaceSelect__right___rWMeA {\n  width: 490px;\n}\n\n.WorkspaceSelect__right___rWMeA h2 {\n  color: #21ce99;\n  cursor: pointer;\n  margin-top: 15px;\n  font-size: 24px;\n}\n\n.WorkspaceSelect__right___rWMeA h2:hover {\n  color: #ed32b9;\n}\n\n.WorkspaceSelect__new___3qhF5 {\n  display: flex;\n  font-size: 20px;\n  margin-top: 20px;\n}\n\n.WorkspaceSelect__new___3qhF5 p {\n  color: #999;\n  margin-right: 5px;\n}\n\n.WorkspaceSelect__new___3qhF5 > input {\n  border-radius: 3px;\n  border: solid 1px #ed32b9;\n  color: black;\n}\n\n.WorkspaceSelect__new___3qhF5 input:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -46533,6 +46535,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// import './reset.css';
+
 //remove me later
 
 
@@ -46768,7 +46772,11 @@ var _NewChannelModal2 = _interopRequireDefault(_NewChannelModal);
 
 var _modal_actions = __webpack_require__(/*! ../modal/modal_actions */ "./src/modal/modal_actions.js");
 
+var _channel_actions = __webpack_require__(/*! ./channel_actions */ "./src/channel/channel_actions.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -46780,23 +46788,79 @@ var NewChannelModal = function (_Component) {
   _inherits(NewChannelModal, _Component);
 
   function NewChannelModal() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, NewChannelModal);
 
-    return _possibleConstructorReturn(this, (NewChannelModal.__proto__ || Object.getPrototypeOf(NewChannelModal)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NewChannelModal.__proto__ || Object.getPrototypeOf(NewChannelModal)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      name: '',
+      purpose: ''
+    }, _this.update = function (field) {
+      return function (e) {
+        return _this.setState(_defineProperty({}, field, e.target.value));
+      };
+    }, _this.handleSubmit = function () {
+      _this.props.create(_this.state);
+      _this.props.close();
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(NewChannelModal, [{
     key: 'render',
     value: function render() {
-      console.log(this.props.modal);
       return _react2.default.createElement(
         'div',
-        { className: _NewChannelModal2.default.open },
-        'New Channel Modal',
+        { className: this.props.modal ? _NewChannelModal2.default.open : _NewChannelModal2.default.closed },
         _react2.default.createElement(
           'button',
           { className: _NewChannelModal2.default.closeButton, onClick: this.props.close },
           '\u24E7'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: _NewChannelModal2.default.modal },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Create a channel'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Channels are where your team communicates. They\'re best when organized around a topic \u2013 #leads, for example.'
+          ),
+          _react2.default.createElement(
+            'h4',
+            null,
+            'Name'
+          ),
+          _react2.default.createElement('input', { type: 'text', value: this.state.name, onChange: this.update('name') }),
+          _react2.default.createElement(
+            'h4',
+            null,
+            'Purpose'
+          ),
+          _react2.default.createElement('input', { type: 'text', value: this.state.purpose, onChange: this.update('purpose') }),
+          _react2.default.createElement(
+            'div',
+            { className: _NewChannelModal2.default.formButtons },
+            _react2.default.createElement(
+              'button',
+              { onClick: this.props.close },
+              'Cancel'
+            ),
+            _react2.default.createElement(
+              'button',
+              { onClick: this.handleSubmit },
+              'Create Channel'
+            )
+          )
         )
       );
     }
@@ -46815,13 +46879,14 @@ var mdp = function mdp(dispatch) {
   return {
     close: function close() {
       return dispatch((0, _modal_actions.closeModal)());
+    },
+    create: function create(channel) {
+      return dispatch((0, _channel_actions.createChannel)(channel));
     }
   };
 };
 
 exports.default = (0, _reactRedux.connect)(msp, mdp)(NewChannelModal);
-
-// this.props.modal ? style.open : style.closed
 
 /***/ }),
 
@@ -46838,6 +46903,10 @@ exports.default = (0, _reactRedux.connect)(msp, mdp)(NewChannelModal);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.createChannel = exports.selectChannel = exports.fetchChannels = undefined;
+
+var _workspace_actions = __webpack_require__(/*! ../workspace/workspace_actions */ "./src/workspace/workspace_actions.js");
+
 var fetchChannels = exports.fetchChannels = function fetchChannels(workspaceId) {
   return function (dispatch) {
     return console.log('fetching channels for ', workspaceId);
@@ -46847,6 +46916,19 @@ var fetchChannels = exports.fetchChannels = function fetchChannels(workspaceId) 
 var selectChannel = exports.selectChannel = function selectChannel(channelId) {
   return function (dispatch) {
     return console.log('selecting channel');
+  };
+};
+
+var createChannel = exports.createChannel = function createChannel(channel) {
+  return function (dispatch, getState) {
+    var _getState = getState(),
+        userId = _getState.session.currentUser,
+        workspaceId = _getState.ui.activeWorkspace;
+
+    return axios.post('/api/channels', { userId: userId, workspaceId: workspaceId, channel: channel }).then(function (_ref) {
+      var workspace = _ref.data;
+      return dispatch((0, _workspace_actions.receiveWorkspace)(workspace));
+    });
   };
 };
 
@@ -46926,19 +47008,53 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-  return _react2.default.createElement(
-    'div',
-    null,
-    'Feed'
-  );
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Feed = function (_Component) {
+  _inherits(Feed, _Component);
+
+  function Feed() {
+    _classCallCheck(this, Feed);
+
+    return _possibleConstructorReturn(this, (Feed.__proto__ || Object.getPrototypeOf(Feed)).apply(this, arguments));
+  }
+
+  _createClass(Feed, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: style.feed },
+        'Feed'
+      );
+    }
+  }]);
+
+  return Feed;
+}(_react.Component);
+
+var msp = function msp(state) {
+  return {
+    channel: null
+  };
 };
+// state.entities.channels[state.ui.activeChannel]
+
+exports.default = (0, _reactRedux.connect)(msp)(Feed);
 
 /***/ }),
 

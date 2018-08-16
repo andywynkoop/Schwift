@@ -4,3 +4,35 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+button,
+i,
+div,
+p,
+input,
+textarea,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}

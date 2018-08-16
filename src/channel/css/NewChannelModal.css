@@ -8,7 +8,7 @@ div.open, div.closed {
 }
 
 .open {
-  width: 100vw;
+  width: 70vw;
   background: #333;
 }
 
@@ -34,4 +34,75 @@ div.open, div.closed {
 
 .closeButton:focus {
   outline: none;
+}
+
+.modal {
+  width: 600px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.modal h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.modal h4 {
+  color: #ed32b9;
+  text-shadow: 0 0 25px #ed32b9;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.modal input {
+  height: 40px;
+  width: 600px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.formButtons button {
+  height: 40px;
+  border-radius: 3px;
+  padding: 10px;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.formButtons button:nth-child(1) {
+  color: #ed32b9;
+  text-shadow: 0 0 25px #ed32b9;
+  margin-right: 10px;
+  border: solid 1px #ed32b9;
+}
+
+.formButtons button:nth-child(1):hover {
+  box-shadow: 0 0 10px #ed32b9;
+}
+
+
+.formButtons button:nth-child(2) {
+  color: #21ce99;
+  text-shadow: 0 0 25px #21ce99;
+  border: solid 1px #21ce99;
+}
+
+.formButtons button:nth-child(2):hover {
+  box-shadow: 0 0 10px #21ce99;
 }

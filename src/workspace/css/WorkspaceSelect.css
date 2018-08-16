@@ -19,8 +19,9 @@
   text-align: center;
 }
 
-.left h1, .right h1 {
+.left > h1, .right > h1 {
   margin-bottom: 50px;
+  font-size: 32px;
 }
 
 .left ul {
@@ -48,6 +49,7 @@
   color: #21ce99;
   cursor: pointer;
   margin-top: 15px;
+  font-size: 24px;
 }
 
 .right h2:hover {
@@ -65,7 +67,7 @@
   margin-right: 5px;
 }
 
-.new input {
+.new > input {
   border-radius: 3px;
   border: solid 1px #ed32b9;
   color: black;
