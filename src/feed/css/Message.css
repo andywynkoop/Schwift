@@ -1,0 +1,29 @@
+.message {
+  padding: 10px 20px;
+  display: flex;
+}
+
+.message:hover {
+  background: #222;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.timestamp {
+  color: #666;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.name {
+  font-weight: bold;
+  text-shadow: 0 0 10px #21ce99;
+}
+
+.body {
+  margin-top: 5px;
+  font-size: 14px;
+}

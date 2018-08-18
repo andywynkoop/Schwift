@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import style from './css/Feed.css';
 import Textarea from 'react-textarea-autosize';
 import { sendMessage } from './feed_actions';
+import { selectMessages } from './reducers/selectors';
+import Message from './Message';
 
 
 class Feed extends Component {
@@ -11,10 +13,15 @@ class Feed extends Component {
     keyMap: {}
   }
 
+  componentDidUpdate() {
+    if (this.feedEnd)
+      this.scrollToFeedEnd();
+  }
+
   update = field => e => this.setState({ [field]: e.target.value });
   
   keyDown = ({ keyCode }) => {
-    const { keyMap } = this.state;
+    let { keyMap } = this.state;
     if (keyCode === 13 && keyMap[18]) {
       this.submit();
     }
@@ -29,20 +36,27 @@ class Feed extends Component {
   }
 
   submit = () => {
+    console.log(this.state.message);
     this.props.send(this.state.message);
     this.setState({ message: '' });
+  }
+
+  scrollToFeedEnd = () => {
+    this.feedEnd.scrollIntoView({ behavior: "smooth" });
   }
 
   render() {
     const { channel } = this.props;
     if (!channel) return <div/>;
+    console.log(this.state.message);
     return(
       <div className={style.feed}>
         <div className={style.feedHeader}>
           #{channel.name}
         </div>
         <div className={style.feedMessages}>
-          Feed
+          {this.props.messages.map((message) => <Message key={message._id} message={message} />)}
+          <div ref={el => this.feedEnd = el } />
         </div>
         <div className={style.feedInput}>
           <div className={style.container}>
@@ -61,7 +75,8 @@ class Feed extends Component {
 }
 
 const msp = state => ({
-  channel: state.entities.channels[state.ui.activeChannel]
+  channel: state.entities.channels[state.ui.activeChannel],
+  messages: selectMessages(state)
 });
 
 const mdp = dispatch => ({

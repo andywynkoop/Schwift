@@ -1834,7 +1834,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".Feed__feed___a9vye {\n  padding-top: 60px;\n  width: 80vw;\n}\n\n.Feed__feedHeader___2aew8 {\n  font-size: 18px;\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  position: fixed;\n  height: 60px;\n  top: 0;\n  padding: 20px;\n  border-bottom: solid 1px #222;\n  width: 100%;\n}\n\n.Feed__feedMessages___1fwlo {\n  margin-right: 20px;\n}\n\n.Feed__feedInput___2IVtA {\n  position: fixed;\n  bottom: 30px;\n  width: inherit;\n}\n\n.Feed__feedInput___2IVtA textarea {\n  width: 90%;\n  font-size: 16px;\n  margin-left: 20px;\n  padding: 10px;\n  border: solid 2px #ed32b9;\n  border-radius: 5px;\n}\n", ""]);
+exports.push([module.i, ".Feed__feed___a9vye {\n  padding-top: 60px;\n  width: 80vw;\n  height: 100vh;\n  padding-bottom: 80px;\n  overflow: scroll;\n}\n\n.Feed__feedHeader___2aew8 {\n  font-size: 18px;\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  background: #111;\n  position: fixed;\n  height: 60px;\n  top: 0;\n  padding: 20px;\n  border-bottom: solid 1px #222;\n  width: 100%;\n}\n\n.Feed__feedMessages___1fwlo {\n  margin-right: 20px;\n}\n\n.Feed__feedInput___2IVtA {\n  position: fixed;\n  bottom: 0px;\n  padding-bottom: 30px;\n  width: inherit;\n  background: #111;\n}\n\n.Feed__feedInput___2IVtA textarea {\n  width: 90%;\n  font-size: 16px;\n  margin-left: 20px;\n  padding: 10px;\n  border: solid 2px #ed32b9;\n  border-radius: 5px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1842,6 +1842,31 @@ exports.locals = {
 	"feedHeader": "Feed__feedHeader___2aew8",
 	"feedMessages": "Feed__feedMessages___1fwlo",
 	"feedInput": "Feed__feedInput___2IVtA"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./src/feed/css/Message.css":
+/*!********************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6!./src/feed/css/Message.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Message__message___3WNHB {\n  padding: 10px 20px;\n  display: flex;\n}\n\n.Message__message___3WNHB:hover {\n  background: #222;\n}\n\n.Message__avatar___2ZDI7 {\n  height: 40px;\n  width: 40px;\n}\n\n.Message__timestamp___38anu {\n  color: #666;\n  font-size: 14px;\n  margin-left: 5px;\n}\n\n.Message__name___1wt6B {\n  font-weight: bold;\n  text-shadow: 0 0 10px #21ce99;\n}\n\n.Message__body___38thN {\n  margin-top: 5px;\n  font-size: 14px;\n}", ""]);
+
+// exports
+exports.locals = {
+	"message": "Message__message___3WNHB",
+	"avatar": "Message__avatar___2ZDI7",
+	"timestamp": "Message__timestamp___38anu",
+	"name": "Message__name___1wt6B",
+	"body": "Message__body___38thN"
 };
 
 /***/ }),
@@ -45348,19 +45373,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/redux-logger/dist/redux-logger.js":
-/*!********************************************************!*\
-  !*** ./node_modules/redux-logger/dist/redux-logger.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):undefined}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
 /***/ "./node_modules/redux-thunk/es/index.js":
 /*!**********************************************!*\
   !*** ./node_modules/redux-thunk/es/index.js ***!
@@ -47067,22 +47079,26 @@ var ChannelIndex = function (_Component) {
   _inherits(ChannelIndex, _Component);
 
   function ChannelIndex() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, ChannelIndex);
 
-    return _possibleConstructorReturn(this, (ChannelIndex.__proto__ || Object.getPrototypeOf(ChannelIndex)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ChannelIndex.__proto__ || Object.getPrototypeOf(ChannelIndex)).call.apply(_ref, [this].concat(args))), _this), _this.selectChannel = function (channelId) {
+      _this.props.selectChannel(channelId);
+      _this.props.fetchChannel(channelId);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(ChannelIndex, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.props.setActiveWorkspace(this.props.match.params.id);
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps) {
-      if (!prevProps.workspace) {
-        this.props.fetchChannels(this.props.workspace._id);
-      }
     }
   }, {
     key: 'render',
@@ -47139,7 +47155,7 @@ var ChannelIndex = function (_Component) {
             {
               key: channel._id,
               onClick: function onClick() {
-                return _this2.props.selectChannel(channel._id);
+                return _this2.selectChannel(channel._id);
               }
             },
             "# ",
@@ -47179,11 +47195,11 @@ var mdp = function mdp(dispatch) {
     setActiveWorkspace: function setActiveWorkspace(workspaceId) {
       return dispatch((0, _workspace_actions.receiveActiveWorkspace)(workspaceId));
     },
-    fetchChannels: function fetchChannels(workspaceId) {
-      return dispatch((0, _channel_actions.fetchChannels)(workspaceId));
-    },
     selectChannel: function selectChannel(channelId) {
       return dispatch((0, _channel_actions.selectChannel)(channelId));
+    },
+    fetchChannel: function fetchChannel(channelId) {
+      return dispatch((0, _channel_actions.fetchChannel)(channelId));
     },
     openNewChannel: function openNewChannel() {
       return dispatch((0, _modal_actions.setModal)("CREATE_CHANNEL"));
@@ -47354,15 +47370,9 @@ exports.default = (0, _reactRedux.connect)(msp, mdp)(NewChannelModal);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.createChannel = exports.selectChannel = exports.SELECT_CHANNEL = exports.fetchChannels = undefined;
+exports.fetchChannel = exports.receiveChannel = exports.RECEIVE_CHANNEL = exports.createChannel = exports.selectChannel = exports.SELECT_CHANNEL = undefined;
 
 var _workspace_actions = __webpack_require__(/*! ../workspace/workspace_actions */ "./src/workspace/workspace_actions.js");
-
-var fetchChannels = exports.fetchChannels = function fetchChannels(workspaceId) {
-  return function (dispatch) {
-    return console.log('fetching channels for ', workspaceId);
-  };
-};
 
 var SELECT_CHANNEL = exports.SELECT_CHANNEL = "SELECT_CHANNEL";
 var selectChannel = exports.selectChannel = function selectChannel(channelId) {
@@ -47381,6 +47391,22 @@ var createChannel = exports.createChannel = function createChannel(channel) {
     return axios.post('/api/channels', { userId: userId, workspaceId: workspaceId, channel: channel }).then(function (_ref) {
       var workspace = _ref.data;
       return dispatch((0, _workspace_actions.receiveWorkspace)(workspace));
+    });
+  };
+};
+
+var RECEIVE_CHANNEL = exports.RECEIVE_CHANNEL = "RECEIVE_CHANNEL";
+var receiveChannel = exports.receiveChannel = function receiveChannel(channel) {
+  return {
+    type: RECEIVE_CHANNEL,
+    channel: channel
+  };
+};
+var fetchChannel = exports.fetchChannel = function fetchChannel(channelId) {
+  return function (dispatch) {
+    return axios.get("/api/channels/" + channelId).then(function (_ref2) {
+      var channel = _ref2.data;
+      return dispatch(receiveChannel(channel));
     });
   };
 };
@@ -47549,6 +47575,12 @@ var _reactTextareaAutosize2 = _interopRequireDefault(_reactTextareaAutosize);
 
 var _feed_actions = __webpack_require__(/*! ./feed_actions */ "./src/feed/feed_actions.js");
 
+var _selectors = __webpack_require__(/*! ./reducers/selectors */ "./src/feed/reducers/selectors.js");
+
+var _Message = __webpack_require__(/*! ./Message */ "./src/feed/Message.js");
+
+var _Message2 = _interopRequireDefault(_Message);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -47596,17 +47628,28 @@ var Feed = function (_Component) {
       delete keyMap[keyCode];
       _this.setState({ keyMap: keyMap });
     }, _this.submit = function () {
+      console.log(_this.state.message);
       _this.props.send(_this.state.message);
       _this.setState({ message: '' });
+    }, _this.scrollToFeedEnd = function () {
+      _this.feedEnd.scrollIntoView({ behavior: "smooth" });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Feed, [{
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      if (this.feedEnd) this.scrollToFeedEnd();
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var channel = this.props.channel;
 
       if (!channel) return _react2.default.createElement('div', null);
+      console.log(this.state.message);
       return _react2.default.createElement(
         'div',
         { className: _Feed2.default.feed },
@@ -47619,7 +47662,12 @@ var Feed = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: _Feed2.default.feedMessages },
-          'Feed'
+          this.props.messages.map(function (message) {
+            return _react2.default.createElement(_Message2.default, { key: message._id, message: message });
+          }),
+          _react2.default.createElement('div', { ref: function ref(el) {
+              return _this2.feedEnd = el;
+            } })
         ),
         _react2.default.createElement(
           'div',
@@ -47645,7 +47693,8 @@ var Feed = function (_Component) {
 
 var msp = function msp(state) {
   return {
-    channel: state.entities.channels[state.ui.activeChannel]
+    channel: state.entities.channels[state.ui.activeChannel],
+    messages: (0, _selectors.selectMessages)(state)
   };
 };
 
@@ -47661,6 +47710,81 @@ exports.default = (0, _reactRedux.connect)(msp, mdp)(Feed);
 
 /***/ }),
 
+/***/ "./src/feed/Message.js":
+/*!*****************************!*\
+  !*** ./src/feed/Message.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+var _Message = __webpack_require__(/*! ./css/Message.css */ "./src/feed/css/Message.css");
+
+var _Message2 = _interopRequireDefault(_Message);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defaultAvatar = "https://s3-us-west-1.amazonaws.com/spacebook-assets/photos/images/000/000/001/original/no_face.png";
+
+var Message = function Message(_ref) {
+  var message = _ref.message,
+      author = _ref.author,
+      timestamp = _ref.timestamp;
+  return _react2.default.createElement(
+    'div',
+    { className: _Message2.default.message },
+    _react2.default.createElement('img', { src: defaultAvatar, className: _Message2.default.avatar }),
+    _react2.default.createElement(
+      'div',
+      { className: _Message2.default.content },
+      _react2.default.createElement(
+        'p',
+        null,
+        _react2.default.createElement(
+          'span',
+          { className: _Message2.default.name },
+          author.firstname,
+          ' ',
+          author.lastname
+        ),
+        _react2.default.createElement(
+          'span',
+          { className: _Message2.default.timestamp },
+          timestamp
+        )
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: _Message2.default.body },
+        message.body
+      )
+    )
+  );
+};
+
+var msp = function msp(state, props) {
+  return {
+    author: state.entities.users[props.message.author],
+    timestamp: new Date(props.message.createdAt).toLocaleTimeString()
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(msp)(Message);
+
+/***/ }),
+
 /***/ "./src/feed/css/Feed.css":
 /*!*******************************!*\
   !*** ./src/feed/css/Feed.css ***!
@@ -47670,6 +47794,36 @@ exports.default = (0, _reactRedux.connect)(msp, mdp)(Feed);
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./Feed.css */ "./node_modules/css-loader/index.js?!./src/feed/css/Feed.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/feed/css/Message.css":
+/*!**********************************!*\
+  !*** ./src/feed/css/Message.css ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./Message.css */ "./node_modules/css-loader/index.js?!./src/feed/css/Message.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -47719,10 +47873,91 @@ var receiveMessage = exports.receiveMessage = function receiveMessage(message) {
     message: message
   };
 };
-var sendMessage = exports.sendMessage = function sendMessage(message) {
-  return function (dispatch) {
-    return console.log('sending: ', message);
+var sendMessage = exports.sendMessage = function sendMessage(body) {
+  return function (dispatch, getState) {
+    var _getState = getState(),
+        author = _getState.session.currentUser,
+        channel = _getState.ui.activeChannel;
+
+    var message = { body: body, author: author, channel: channel };
+    return _axios2.default.post('/api/messages', { message: message }).then(function (_ref) {
+      var message = _ref.data;
+      return dispatch(receiveMessage(message));
+    });
   };
+};
+
+/***/ }),
+
+/***/ "./src/feed/reducers/messages_reducer.js":
+/*!***********************************************!*\
+  !*** ./src/feed/reducers/messages_reducer.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _feed_actions = __webpack_require__(/*! ../feed_actions */ "./src/feed/feed_actions.js");
+
+var _channel_actions = __webpack_require__(/*! ../../channel/channel_actions */ "./src/channel/channel_actions.js");
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+  var type = action.type,
+      message = action.message,
+      channel = action.channel;
+
+  var newState = Object.assign({}, state);
+
+  switch (type) {
+    case _feed_actions.RECEIVE_MESSAGE:
+      newState[message._id] = message;
+      return newState;
+    case _channel_actions.RECEIVE_CHANNEL:
+      channel.messages.forEach(function (message) {
+        return newState[message._id] = message;
+      });
+      return newState;
+    default:
+      return state;
+  }
+};
+
+/***/ }),
+
+/***/ "./src/feed/reducers/selectors.js":
+/*!****************************************!*\
+  !*** ./src/feed/reducers/selectors.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var selectMessages = exports.selectMessages = function selectMessages(state) {
+  var messages = state.entities.messages;
+
+  var channel = state.ui.activeChannel;
+  var messagesArray = Object.values(messages);
+  var channelMessagesArray = messagesArray.filter(function (message) {
+    return message.channel === channel;
+  });
+  return channelMessagesArray.sort(function (msg1, msg2) {
+    if (msg1.createdAt < msg2.createdAt) return -1;
+    if (msg1.createdAt > msg2.createdAt) return 1;
+    return 0;
+  });
 };
 
 /***/ }),
@@ -47757,17 +47992,15 @@ var _reduxThunk = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-t
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reduxLogger = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
-
-var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
-
 var _App = __webpack_require__(/*! ./App */ "./src/App.js");
 
 var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var store = (0, _redux.createStore)(_root_reducer2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, _reduxLogger2.default));
+var store = (0, _redux.createStore)(_root_reducer2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default));
+// import logger from 'redux-logger';
+
 window.store = store;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -47872,12 +48105,17 @@ var _channels_reducer = __webpack_require__(/*! ../channel/reducers/channels_red
 
 var _channels_reducer2 = _interopRequireDefault(_channels_reducer);
 
+var _messages_reducer = __webpack_require__(/*! ../feed/reducers/messages_reducer */ "./src/feed/reducers/messages_reducer.js");
+
+var _messages_reducer2 = _interopRequireDefault(_messages_reducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
   users: _users_reducer2.default,
   workspaces: _workspaces_reducer2.default,
-  channels: _channels_reducer2.default
+  channels: _channels_reducer2.default,
+  messages: _messages_reducer2.default
 });
 
 /***/ }),

@@ -1,12 +1,16 @@
 .feed {
   padding-top: 60px;
   width: 80vw;
+  height: 100vh;
+  padding-bottom: 80px;
+  overflow: scroll;
 }
 
 .feedHeader {
   font-size: 18px;
   color: #ed32b9;
   text-shadow: 0 0 25px #ed32b9;
+  background: #111;
   position: fixed;
   height: 60px;
   top: 0;
@@ -21,8 +25,10 @@
 
 .feedInput {
   position: fixed;
-  bottom: 30px;
+  bottom: 0px;
+  padding-bottom: 30px;
   width: inherit;
+  background: #111;
 }
 
 .feedInput textarea {
