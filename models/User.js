@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const WorkspaceSchema = require('./Workspace');
 
 const userSchema = new Schema({
   firstname: String,

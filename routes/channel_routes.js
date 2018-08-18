@@ -1,11 +1,13 @@
 require('../models/Channel');
+require('../models/Message');
 
 module.exports = (app, mongoose) => {
   const Channel = mongoose.model('Channel');
   const Workspace = mongoose.model('Workspace');
   const User = mongoose.model('User');
+  const Message = mongoose.model('Message');
 
-  //create a channel for a workspace
+  // create a channel for a workspace
   app.post('/api/channels', (req, res) => {
     const { userId, workspaceId, channel } = req.body;
     channelModel = new Channel(channel);
@@ -25,6 +27,15 @@ module.exports = (app, mongoose) => {
           res.send(workspaceDB);
         });
       });
+    });
+  });
+
+  // fetch a channel with its messages
+  app.get('/api/channels/:channelId', (req, res) => {
+    const { channelId } = req.params;
+    Channel.findOne({ _id: channelId}).populate('messages').exec((err, channelDB) => {
+      if (err) res.send(err);
+      res.send(channelDB);
     });
   });
 }
