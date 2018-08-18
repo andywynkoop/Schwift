@@ -16,17 +16,28 @@ class ChannelIndex extends Component {
     }
   }
   render() {
-    const { workspace, openNewChannel } = this.props;
+    const { workspace, openNewChannel, user } = this.props;
     if (!workspace) return <div />;
     return(
       <div className={style.app}>
         <h1>{workspace.name}</h1>
+        <h2>
+          <span className={style.online}>●</span>
+          <span className={style.name}>{user.firstname} {user.lastname}</span>
+        </h2>
         <div className={style.channelHeader}>
           <h2>Channels</h2>
           <button onClick={openNewChannel}>⊕</button>
         </div>
         
-        {workspace.channels.map(channel => <h3 key={channel._id}>{"# "}{channel.name}</h3>)}
+        {workspace.channels.map(channel => 
+          <h3 
+            key={channel._id} 
+            onClick={() => this.props.selectChannel(channel._id)}
+          >
+            {"# "}{channel.name}
+          </h3>
+        )}
         <div className={style.channelHeader}>
           <h2>Direct Messages</h2>
           <button>⊕</button>
@@ -37,7 +48,8 @@ class ChannelIndex extends Component {
 }
 
 const msp = state => ({
-  workspace: state.entities.workspaces[state.ui.activeWorkspace]
+  workspace: state.entities.workspaces[state.ui.activeWorkspace],
+  user: state.entities.users[state.session.currentUser]
 });
 
 const mdp = dispatch => ({

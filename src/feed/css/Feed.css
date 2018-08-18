@@ -1,0 +1,35 @@
+.feed {
+  padding-top: 60px;
+  width: 80vw;
+}
+
+.feedHeader {
+  font-size: 18px;
+  color: #ed32b9;
+  text-shadow: 0 0 25px #ed32b9;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  padding: 20px;
+  border-bottom: solid 1px #222;
+  width: 100%;
+}
+
+.feedMessages {
+  margin-right: 20px;
+}
+
+.feedInput {
+  position: fixed;
+  bottom: 30px;
+  width: inherit;
+}
+
+.feedInput textarea {
+  width: 90%;
+  font-size: 16px;
+  margin-left: 20px;
+  padding: 10px;
+  border: solid 2px #ed32b9;
+  border-radius: 5px;
+}

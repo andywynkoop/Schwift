@@ -1785,11 +1785,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 230px;\n  background: #222;\n  height: 100vh;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  text-transform: capitalize;\n  font-size: 18px;\n  padding: 0px 25px;\n  margin-bottom: 5px;\n}\n\n.ChannelIndex__channelHeader___kdXgi {\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  margin: 10px 0px;\n}\n\n.ChannelIndex__app___118FP h2 {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  text-transform: capitalize;\n  font-size: 16px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi button {\n  background: none;\n  border: none;\n  color: #21ce99;\n  font-size: 26px;\n  position: absolute;\n  right: 5px;\n  top: -6px;\n  text-shadow: 0 0 25px #21ce99;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:hover, .ChannelIndex__channelHeader___kdXgi h2:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:focus {\n  outline: 0;\n}\n\n.ChannelIndex__app___118FP h3 {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  text-transform: capitalize;\n  font-size: 14px;\n  margin: 0;\n  padding: 5px 25px;\n}\n\n.ChannelIndex__app___118FP h3:hover {\n  background: #111;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".ChannelIndex__app___118FP {\n  width: 230px;\n  background: #222;\n  height: 100vh;\n  padding: 15px 0px;\n}\n\n.ChannelIndex__app___118FP h1 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  text-transform: capitalize;\n  font-size: 18px;\n  padding: 0px 25px;\n  margin-bottom: 5px;\n}\n\n.ChannelIndex__online___kZGCZ {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  font-size: 14px;\n  margin-left: 10px;\n}\n\n.ChannelIndex__name___3knOG {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  font-size: 14px;\n  margin-left: 5px;\n}\n\n.ChannelIndex__channelHeader___kdXgi {\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  margin: 10px 0px;\n}\n\n.ChannelIndex__app___118FP h2 {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  text-transform: capitalize;\n  font-size: 16px;\n  padding: 0px 25px;\n}\n\n.ChannelIndex__channelHeader___kdXgi button {\n  background: none;\n  border: none;\n  color: #21ce99;\n  font-size: 26px;\n  position: absolute;\n  right: 5px;\n  top: -6px;\n  text-shadow: 0 0 25px #21ce99;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:hover, .ChannelIndex__channelHeader___kdXgi h2:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.ChannelIndex__channelHeader___kdXgi button:focus {\n  outline: 0;\n}\n\n.ChannelIndex__app___118FP h3 {\n  color: #fff;\n  text-shadow: 0 0 25px #fff;\n  text-transform: capitalize;\n  font-size: 14px;\n  margin: 0;\n  padding: 5px 25px;\n}\n\n.ChannelIndex__app___118FP h3:hover {\n  background: #111;\n  cursor: pointer;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"app": "ChannelIndex__app___118FP",
+	"online": "ChannelIndex__online___kZGCZ",
+	"name": "ChannelIndex__name___3knOG",
 	"channelHeader": "ChannelIndex__channelHeader___kdXgi"
 };
 
@@ -1807,7 +1809,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "div.NewChannelModal__open___3YP_Z, div.NewChannelModal__closed___1Htjz {\n  position: absolute;\n  top: 0;\n  z-index: 1;\n  height: 100vh;\n  transition: 0.25s;\n  overflow: hidden;\n}\n\n.NewChannelModal__open___3YP_Z {\n  width: 70vw;\n  background: #333;\n}\n\n.NewChannelModal__closed___1Htjz {\n  width: 0px;\n}\n\n.NewChannelModal__closeButton___9BmyS {\n  background: none;\n  border: none;\n  font-size: 28px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n\n.NewChannelModal__closeButton___9BmyS:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.NewChannelModal__closeButton___9BmyS:focus {\n  outline: none;\n}\n\n.NewChannelModal__modal___aGp-L {\n  width: 600px;\n  margin: auto;\n  padding-top: 50px;\n}\n\n.NewChannelModal__modal___aGp-L h1 {\n  color: #fff;\n  margin-bottom: 10px;\n}\n\n.NewChannelModal__modal___aGp-L p {\n  color: #aaa;\n  margin-bottom: 20px;\n}\n\n.NewChannelModal__modal___aGp-L h4 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  margin: 0;\n  margin-bottom: 10px;\n}\n\n.NewChannelModal__modal___aGp-L input {\n  height: 40px;\n  width: 600px;\n  padding: 10px;\n  font-size: 18px;\n  border: none;\n  border-radius: 3px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n}\n\n.NewChannelModal__formButtons___1MyZT {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 50px;\n}\n\n.NewChannelModal__formButtons___1MyZT button {\n  height: 40px;\n  border-radius: 3px;\n  padding: 10px;\n  background: none;\n  font-size: 18px;\n  cursor: pointer;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(1) {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  margin-right: 10px;\n  border: solid 1px #ed32b9;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(1):hover {\n  box-shadow: 0 0 10px #ed32b9;\n}\n\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(2) {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  border: solid 1px #21ce99;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(2):hover {\n  box-shadow: 0 0 10px #21ce99;\n}\n", ""]);
+exports.push([module.i, "div.NewChannelModal__open___3YP_Z, div.NewChannelModal__closed___1Htjz {\n  position: absolute;\n  top: 0;\n  z-index: 1;\n  height: 100vh;\n  transition: 0.25s;\n  overflow: hidden;\n}\n\n.NewChannelModal__open___3YP_Z {\n  width: 70vw;\n  background: #333;\n}\n\n.NewChannelModal__closed___1Htjz {\n  width: 0px;\n}\n\n.NewChannelModal__closeButton___9BmyS {\n  background: none;\n  border: none;\n  font-size: 20px;\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n\n.NewChannelModal__closeButton___9BmyS:hover {\n  color: #fff;\n  cursor: pointer;\n}\n\n.NewChannelModal__closeButton___9BmyS:focus {\n  outline: none;\n}\n\n.NewChannelModal__modal___aGp-L {\n  width: 600px;\n  margin: auto;\n  padding-top: 50px;\n}\n\n.NewChannelModal__modal___aGp-L h1 {\n  color: #fff;\n  margin-bottom: 10px;\n}\n\n.NewChannelModal__modal___aGp-L p {\n  color: #aaa;\n  margin-bottom: 20px;\n}\n\n.NewChannelModal__modal___aGp-L h4 {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  margin: 0;\n  margin-bottom: 10px;\n}\n\n.NewChannelModal__modal___aGp-L input {\n  height: 40px;\n  width: 600px;\n  padding: 10px;\n  font-size: 18px;\n  border: none;\n  border-radius: 3px;\n  margin-bottom: 10px;\n  box-sizing: border-box;\n}\n\n.NewChannelModal__formButtons___1MyZT {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 50px;\n}\n\n.NewChannelModal__formButtons___1MyZT button {\n  height: 40px;\n  border-radius: 3px;\n  padding: 10px;\n  background: none;\n  font-size: 18px;\n  cursor: pointer;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(1) {\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  margin-right: 10px;\n  border: solid 1px #ed32b9;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(1):hover {\n  box-shadow: 0 0 10px #ed32b9;\n}\n\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(2) {\n  color: #21ce99;\n  text-shadow: 0 0 25px #21ce99;\n  border: solid 1px #21ce99;\n}\n\n.NewChannelModal__formButtons___1MyZT button:nth-child(2):hover {\n  box-shadow: 0 0 10px #21ce99;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1816,6 +1818,30 @@ exports.locals = {
 	"closeButton": "NewChannelModal__closeButton___9BmyS",
 	"modal": "NewChannelModal__modal___aGp-L",
 	"formButtons": "NewChannelModal__formButtons___1MyZT"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./src/feed/css/Feed.css":
+/*!*****************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6!./src/feed/css/Feed.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Feed__feed___a9vye {\n  padding-top: 60px;\n  width: 80vw;\n}\n\n.Feed__feedHeader___2aew8 {\n  font-size: 18px;\n  color: #ed32b9;\n  text-shadow: 0 0 25px #ed32b9;\n  position: fixed;\n  height: 60px;\n  top: 0;\n  padding: 20px;\n  border-bottom: solid 1px #222;\n  width: 100%;\n}\n\n.Feed__feedMessages___1fwlo {\n  margin-right: 20px;\n}\n\n.Feed__feedInput___2IVtA {\n  position: fixed;\n  bottom: 30px;\n  width: inherit;\n}\n\n.Feed__feedInput___2IVtA textarea {\n  width: 90%;\n  font-size: 16px;\n  margin-left: 20px;\n  padding: 10px;\n  border: solid 2px #ed32b9;\n  border-radius: 5px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"feed": "Feed__feed___a9vye",
+	"feedHeader": "Feed__feedHeader___2aew8",
+	"feedMessages": "Feed__feedMessages___1fwlo",
+	"feedInput": "Feed__feedInput___2IVtA"
 };
 
 /***/ }),
@@ -1972,7 +1998,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".WorkspaceSelect__app___jXcqi {\n  width: 100%;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  width: 980px;\n  margin: auto;\n  padding-top: 120px;\n  display: flex;\n  justify-content: space-between;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  font-size: 24px;\n}\n\n.WorkspaceSelect__left___1KHkp {\n  width: 490px;\n  text-align: center;\n}\n\n.WorkspaceSelect__left___1KHkp > h1, .WorkspaceSelect__right___rWMeA > h1 {\n  margin-bottom: 50px;\n  font-size: 32px;\n}\n\n.WorkspaceSelect__left___1KHkp ul {\n  margin-left: 145px;\n}\n\n.WorkspaceSelect__left___1KHkp li {\n  color: #ed32b9;\n  text-align: left;\n  display: block;\n  font-size: 36px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n\n.WorkspaceSelect__left___1KHkp li:hover {\n  color: #21ce99;\n}\n\n.WorkspaceSelect__right___rWMeA {\n  width: 490px;\n}\n\n.WorkspaceSelect__right___rWMeA h2 {\n  color: #21ce99;\n  cursor: pointer;\n  margin-top: 15px;\n  font-size: 24px;\n}\n\n.WorkspaceSelect__right___rWMeA h2:hover {\n  color: #ed32b9;\n}\n\n.WorkspaceSelect__new___3qhF5 {\n  display: flex;\n  font-size: 20px;\n  margin-top: 20px;\n}\n\n.WorkspaceSelect__new___3qhF5 p {\n  color: #999;\n  margin-right: 5px;\n}\n\n.WorkspaceSelect__new___3qhF5 > input {\n  border-radius: 3px;\n  border: solid 1px #ed32b9;\n  color: black;\n}\n\n.WorkspaceSelect__new___3qhF5 input:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}", ""]);
+exports.push([module.i, ".WorkspaceSelect__app___jXcqi {\n  width: 100%;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  width: 980px;\n  margin: auto;\n  padding-top: 120px;\n  display: flex;\n  justify-content: space-between;\n}\n\n.WorkspaceSelect__main___3Dgiq {\n  font-size: 24px;\n}\n\n.WorkspaceSelect__left___1KHkp {\n  width: 490px;\n  text-align: center;\n}\n\n.WorkspaceSelect__left___1KHkp > h1, .WorkspaceSelect__right___rWMeA > h1 {\n  margin-bottom: 50px;\n  font-size: 32px;\n}\n\n.WorkspaceSelect__left___1KHkp ul {\n  margin-left: 145px;\n}\n\n.WorkspaceSelect__left___1KHkp li {\n  color: #ed32b9;\n  text-align: left;\n  display: block;\n  font-size: 24px;\n  margin-top: 10px;\n  cursor: pointer;\n  text-transform: capitalize;\n}\n\n.WorkspaceSelect__left___1KHkp li:hover {\n  color: #21ce99;\n}\n\n.WorkspaceSelect__right___rWMeA {\n  width: 490px;\n}\n\n.WorkspaceSelect__right___rWMeA h2 {\n  color: #21ce99;\n  cursor: pointer;\n  margin-top: 15px;\n  font-size: 24px;\n}\n\n.WorkspaceSelect__right___rWMeA h2:hover {\n  color: #ed32b9;\n}\n\n.WorkspaceSelect__new___3qhF5 {\n  display: flex;\n  font-size: 20px;\n  margin-top: 20px;\n}\n\n.WorkspaceSelect__new___3qhF5 p {\n  color: #999;\n  margin-right: 5px;\n}\n\n.WorkspaceSelect__new___3qhF5 > input {\n  border-radius: 3px;\n  border: solid 1px #ed32b9;\n  color: black;\n}\n\n.WorkspaceSelect__new___3qhF5 input:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -43407,6 +43433,406 @@ function pathToRegexp (path, keys, options) {
 
 /***/ }),
 
+/***/ "./node_modules/react-textarea-autosize/dist/react-textarea-autosize.esm.browser.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/react-textarea-autosize/dist/react-textarea-autosize.esm.browser.js ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+var isIE = !!document.documentElement.currentStyle;
+var HIDDEN_TEXTAREA_STYLE = {
+  'min-height': '0',
+  'max-height': 'none',
+  height: '0',
+  visibility: 'hidden',
+  overflow: 'hidden',
+  position: 'absolute',
+  'z-index': '-1000',
+  top: '0',
+  right: '0'
+};
+var SIZING_STYLE = ['letter-spacing', 'line-height', 'font-family', 'font-weight', 'font-size', 'font-style', 'tab-size', 'text-rendering', 'text-transform', 'width', 'text-indent', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left', 'border-top-width', 'border-right-width', 'border-bottom-width', 'border-left-width', 'box-sizing'];
+var computedStyleCache = {};
+var hiddenTextarea = document.createElement('textarea');
+
+var forceHiddenStyles = function forceHiddenStyles(node) {
+  Object.keys(HIDDEN_TEXTAREA_STYLE).forEach(function (key) {
+    node.style.setProperty(key, HIDDEN_TEXTAREA_STYLE[key], 'important');
+  });
+};
+
+{
+  forceHiddenStyles(hiddenTextarea);
+}
+
+function calculateNodeHeight(uiTextNode, uid, useCache, minRows, maxRows) {
+  if (useCache === void 0) {
+    useCache = false;
+  }
+
+  if (minRows === void 0) {
+    minRows = null;
+  }
+
+  if (maxRows === void 0) {
+    maxRows = null;
+  }
+
+  if (hiddenTextarea.parentNode === null) {
+    document.body.appendChild(hiddenTextarea);
+  } // Copy all CSS properties that have an impact on the height of the content in
+  // the textbox
+
+
+  var nodeStyling = calculateNodeStyling(uiTextNode, uid, useCache);
+
+  if (nodeStyling === null) {
+    return null;
+  }
+
+  var paddingSize = nodeStyling.paddingSize,
+      borderSize = nodeStyling.borderSize,
+      boxSizing = nodeStyling.boxSizing,
+      sizingStyle = nodeStyling.sizingStyle; // Need to have the overflow attribute to hide the scrollbar otherwise
+  // text-lines will not calculated properly as the shadow will technically be
+  // narrower for content
+
+  Object.keys(sizingStyle).forEach(function (key) {
+    hiddenTextarea.style[key] = sizingStyle[key];
+  });
+  forceHiddenStyles(hiddenTextarea);
+  hiddenTextarea.value = uiTextNode.value || uiTextNode.placeholder || 'x';
+  var minHeight = -Infinity;
+  var maxHeight = Infinity;
+  var height = hiddenTextarea.scrollHeight;
+
+  if (boxSizing === 'border-box') {
+    // border-box: add border, since height = content + padding + border
+    height = height + borderSize;
+  } else if (boxSizing === 'content-box') {
+    // remove padding, since height = content
+    height = height - paddingSize;
+  } // measure height of a textarea with a single row
+
+
+  hiddenTextarea.value = 'x';
+  var singleRowHeight = hiddenTextarea.scrollHeight - paddingSize; // Stores the value's rows count rendered in `hiddenTextarea`,
+  // regardless if `maxRows` or `minRows` props are passed
+
+  var valueRowCount = Math.floor(height / singleRowHeight);
+
+  if (minRows !== null) {
+    minHeight = singleRowHeight * minRows;
+
+    if (boxSizing === 'border-box') {
+      minHeight = minHeight + paddingSize + borderSize;
+    }
+
+    height = Math.max(minHeight, height);
+  }
+
+  if (maxRows !== null) {
+    maxHeight = singleRowHeight * maxRows;
+
+    if (boxSizing === 'border-box') {
+      maxHeight = maxHeight + paddingSize + borderSize;
+    }
+
+    height = Math.min(maxHeight, height);
+  }
+
+  var rowCount = Math.floor(height / singleRowHeight);
+  return {
+    height: height,
+    minHeight: minHeight,
+    maxHeight: maxHeight,
+    rowCount: rowCount,
+    valueRowCount: valueRowCount
+  };
+}
+
+function calculateNodeStyling(node, uid, useCache) {
+  if (useCache === void 0) {
+    useCache = false;
+  }
+
+  if (useCache && computedStyleCache[uid]) {
+    return computedStyleCache[uid];
+  }
+
+  var style = window.getComputedStyle(node);
+
+  if (style === null) {
+    return null;
+  }
+
+  var sizingStyle = SIZING_STYLE.reduce(function (obj, name) {
+    obj[name] = style.getPropertyValue(name);
+    return obj;
+  }, {});
+  var boxSizing = sizingStyle['box-sizing']; // probably node is detached from DOM, can't read computed dimensions
+
+  if (boxSizing === '') {
+    return null;
+  } // IE (Edge has already correct behaviour) returns content width as computed width
+  // so we need to add manually padding and border widths
+
+
+  if (isIE && boxSizing === 'border-box') {
+    sizingStyle.width = parseFloat(sizingStyle.width) + parseFloat(style['border-right-width']) + parseFloat(style['border-left-width']) + parseFloat(style['padding-right']) + parseFloat(style['padding-left']) + 'px';
+  }
+
+  var paddingSize = parseFloat(sizingStyle['padding-bottom']) + parseFloat(sizingStyle['padding-top']);
+  var borderSize = parseFloat(sizingStyle['border-bottom-width']) + parseFloat(sizingStyle['border-top-width']);
+  var nodeInfo = {
+    sizingStyle: sizingStyle,
+    paddingSize: paddingSize,
+    borderSize: borderSize,
+    boxSizing: boxSizing
+  };
+
+  if (useCache) {
+    computedStyleCache[uid] = nodeInfo;
+  }
+
+  return nodeInfo;
+}
+
+var purgeCache = function purgeCache(uid) {
+  delete computedStyleCache[uid];
+};
+
+var noop = function noop() {}; // IE11 has a problem with eval source maps, can be reproduced with:
+// eval('"use strict"; var onNextFrame = window.cancelAnimationFrame; onNextFrame(4);')
+// so we bind window as context in dev modes
+
+
+var _ref = window.requestAnimationFrame ?  false ? undefined : [window.requestAnimationFrame.bind(window), window.cancelAnimationFrame.bind(window)] : [setTimeout, clearTimeout],
+    onNextFrame = _ref[0],
+    clearNextFrameAction = _ref[1];
+
+var uid = 0;
+
+var TextareaAutosize =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(TextareaAutosize, _React$Component);
+
+  function TextareaAutosize(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this;
+
+    _this._onRef = function (node) {
+      _this._ref = node;
+
+      _this.props.inputRef(node);
+    };
+
+    _this._onChange = function (event) {
+      if (!_this._controlled) {
+        _this._resizeComponent();
+      }
+
+      _this.props.onChange(event, _assertThisInitialized(_assertThisInitialized(_this)));
+    };
+
+    _this._resizeComponent = function (callback) {
+      if (callback === void 0) {
+        callback = noop;
+      }
+
+      var nodeHeight = calculateNodeHeight(_this._ref, _this._uid, _this.props.useCacheForDOMMeasurements, _this.props.minRows, _this.props.maxRows);
+
+      if (nodeHeight === null) {
+        callback();
+        return;
+      }
+
+      var height = nodeHeight.height,
+          minHeight = nodeHeight.minHeight,
+          maxHeight = nodeHeight.maxHeight,
+          rowCount = nodeHeight.rowCount,
+          valueRowCount = nodeHeight.valueRowCount;
+      _this.rowCount = rowCount;
+      _this.valueRowCount = valueRowCount;
+
+      if (_this.state.height !== height || _this.state.minHeight !== minHeight || _this.state.maxHeight !== maxHeight) {
+        _this.setState({
+          height: height,
+          minHeight: minHeight,
+          maxHeight: maxHeight
+        }, callback);
+
+        return;
+      }
+
+      callback();
+    };
+
+    _this.state = {
+      height: props.style && props.style.height || 0,
+      minHeight: -Infinity,
+      maxHeight: Infinity
+    };
+    _this._uid = uid++;
+    _this._controlled = props.value !== undefined;
+    _this._resizeLock = false;
+    return _this;
+  }
+
+  var _proto = TextareaAutosize.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        _inputRef = _this$props.inputRef,
+        _maxRows = _this$props.maxRows,
+        _minRows = _this$props.minRows,
+        _onHeightChange = _this$props.onHeightChange,
+        _useCacheForDOMMeasurements = _this$props.useCacheForDOMMeasurements,
+        props = _objectWithoutPropertiesLoose(_this$props, ["inputRef", "maxRows", "minRows", "onHeightChange", "useCacheForDOMMeasurements"]);
+
+    props.style = _extends({}, props.style, {
+      height: this.state.height
+    });
+    var maxHeight = Math.max(props.style.maxHeight || Infinity, this.state.maxHeight);
+
+    if (maxHeight < this.state.height) {
+      props.style.overflow = 'hidden';
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", _extends({}, props, {
+      onChange: this._onChange,
+      ref: this._onRef
+    }));
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    var _this2 = this;
+
+    this._resizeComponent(); // Working around Firefox bug which runs resize listeners even when other JS is running at the same moment
+    // causing competing rerenders (due to setState in the listener) in React.
+    // More can be found here - facebook/react#6324
+
+
+    this._resizeListener = function () {
+      if (_this2._resizeLock) {
+        return;
+      }
+
+      _this2._resizeLock = true;
+
+      _this2._resizeComponent(function () {
+        _this2._resizeLock = false;
+      });
+    };
+
+    window.addEventListener('resize', this._resizeListener);
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps, prevState) {
+    var _this3 = this;
+
+    if (prevProps !== this.props) {
+      clearNextFrameAction(this._rafId); // cant shorthen the callback because requestAnimationFrame calls it with current time
+
+      this._rafId = onNextFrame(function () {
+        _this3._resizeComponent();
+      });
+    }
+
+    if (this.state.height !== prevState.height) {
+      this.props.onHeightChange(this.state.height, this);
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    clearNextFrameAction(this._rafId);
+    window.removeEventListener('resize', this._resizeListener);
+    purgeCache(this._uid);
+  };
+
+  return TextareaAutosize;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+TextareaAutosize.defaultProps = {
+  inputRef: noop,
+  onChange: noop,
+  onHeightChange: noop,
+  useCacheForDOMMeasurements: false
+};
+ true ? TextareaAutosize.propTypes = {
+  inputRef: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  maxRows: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  minRows: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  onChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  onHeightChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  useCacheForDOMMeasurements: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  value: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+} : undefined;
+
+/* harmony default export */ __webpack_exports__["default"] = (TextareaAutosize);
+
+
+/***/ }),
+
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -46661,9 +47087,12 @@ var ChannelIndex = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           workspace = _props.workspace,
-          openNewChannel = _props.openNewChannel;
+          openNewChannel = _props.openNewChannel,
+          user = _props.user;
 
       if (!workspace) return _react2.default.createElement('div', null);
       return _react2.default.createElement(
@@ -46673,6 +47102,22 @@ var ChannelIndex = function (_Component) {
           'h1',
           null,
           workspace.name
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          _react2.default.createElement(
+            'span',
+            { className: _ChannelIndex2.default.online },
+            '\u25CF'
+          ),
+          _react2.default.createElement(
+            'span',
+            { className: _ChannelIndex2.default.name },
+            user.firstname,
+            ' ',
+            user.lastname
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -46691,7 +47136,12 @@ var ChannelIndex = function (_Component) {
         workspace.channels.map(function (channel) {
           return _react2.default.createElement(
             'h3',
-            { key: channel._id },
+            {
+              key: channel._id,
+              onClick: function onClick() {
+                return _this2.props.selectChannel(channel._id);
+              }
+            },
             "# ",
             channel.name
           );
@@ -46719,7 +47169,8 @@ var ChannelIndex = function (_Component) {
 
 var msp = function msp(state) {
   return {
-    workspace: state.entities.workspaces[state.ui.activeWorkspace]
+    workspace: state.entities.workspaces[state.ui.activeWorkspace],
+    user: state.entities.users[state.session.currentUser]
   };
 };
 
@@ -46903,7 +47354,7 @@ exports.default = (0, _reactRedux.connect)(msp, mdp)(NewChannelModal);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.createChannel = exports.selectChannel = exports.fetchChannels = undefined;
+exports.createChannel = exports.selectChannel = exports.SELECT_CHANNEL = exports.fetchChannels = undefined;
 
 var _workspace_actions = __webpack_require__(/*! ../workspace/workspace_actions */ "./src/workspace/workspace_actions.js");
 
@@ -46913,9 +47364,11 @@ var fetchChannels = exports.fetchChannels = function fetchChannels(workspaceId) 
   };
 };
 
+var SELECT_CHANNEL = exports.SELECT_CHANNEL = "SELECT_CHANNEL";
 var selectChannel = exports.selectChannel = function selectChannel(channelId) {
-  return function (dispatch) {
-    return console.log('selecting channel');
+  return {
+    type: SELECT_CHANNEL,
+    channelId: channelId
   };
 };
 
@@ -46994,6 +47447,76 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./src/channel/reducers/active_channel_reducer.js":
+/*!********************************************************!*\
+  !*** ./src/channel/reducers/active_channel_reducer.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _channel_actions = __webpack_require__(/*! ../channel_actions */ "./src/channel/channel_actions.js");
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var action = arguments[1];
+  var type = action.type,
+      channelId = action.channelId;
+
+
+  switch (type) {
+    case _channel_actions.SELECT_CHANNEL:
+      return channelId;
+    default:
+      return state;
+  }
+};
+
+/***/ }),
+
+/***/ "./src/channel/reducers/channels_reducer.js":
+/*!**************************************************!*\
+  !*** ./src/channel/reducers/channels_reducer.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _workspace_actions = __webpack_require__(/*! ../../workspace/workspace_actions */ "./src/workspace/workspace_actions.js");
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+  var type = action.type,
+      workspace = action.workspace;
+
+
+  switch (type) {
+    case _workspace_actions.RECEIVE_WORKSPACE:
+      var newState = {};
+      workspace.channels.forEach(function (channel) {
+        newState[channel._id] = channel;
+      });
+      return newState;
+    default:
+      return state;
+  }
+};
+
+/***/ }),
+
 /***/ "./src/feed/Feed.js":
 /*!**************************!*\
   !*** ./src/feed/Feed.js ***!
@@ -47016,7 +47539,19 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 
+var _Feed = __webpack_require__(/*! ./css/Feed.css */ "./src/feed/css/Feed.css");
+
+var _Feed2 = _interopRequireDefault(_Feed);
+
+var _reactTextareaAutosize = __webpack_require__(/*! react-textarea-autosize */ "./node_modules/react-textarea-autosize/dist/react-textarea-autosize.esm.browser.js");
+
+var _reactTextareaAutosize2 = _interopRequireDefault(_reactTextareaAutosize);
+
+var _feed_actions = __webpack_require__(/*! ./feed_actions */ "./src/feed/feed_actions.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -47028,18 +47563,79 @@ var Feed = function (_Component) {
   _inherits(Feed, _Component);
 
   function Feed() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, Feed);
 
-    return _possibleConstructorReturn(this, (Feed.__proto__ || Object.getPrototypeOf(Feed)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Feed.__proto__ || Object.getPrototypeOf(Feed)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      message: '',
+      keyMap: {}
+    }, _this.update = function (field) {
+      return function (e) {
+        return _this.setState(_defineProperty({}, field, e.target.value));
+      };
+    }, _this.keyDown = function (_ref2) {
+      var keyCode = _ref2.keyCode;
+      var keyMap = _this.state.keyMap;
+
+      if (keyCode === 13 && keyMap[18]) {
+        _this.submit();
+      }
+      keyMap[keyCode] = true;
+      _this.setState({ keyMap: keyMap });
+    }, _this.keyUp = function (_ref3) {
+      var keyCode = _ref3.keyCode;
+      var keyMap = _this.state.keyMap;
+
+      delete keyMap[keyCode];
+      _this.setState({ keyMap: keyMap });
+    }, _this.submit = function () {
+      _this.props.send(_this.state.message);
+      _this.setState({ message: '' });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Feed, [{
     key: 'render',
     value: function render() {
+      var channel = this.props.channel;
+
+      if (!channel) return _react2.default.createElement('div', null);
       return _react2.default.createElement(
         'div',
-        { className: style.feed },
-        'Feed'
+        { className: _Feed2.default.feed },
+        _react2.default.createElement(
+          'div',
+          { className: _Feed2.default.feedHeader },
+          '#',
+          channel.name
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: _Feed2.default.feedMessages },
+          'Feed'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: _Feed2.default.feedInput },
+          _react2.default.createElement(
+            'div',
+            { className: _Feed2.default.container },
+            _react2.default.createElement(_reactTextareaAutosize2.default, {
+              placeholder: 'Message #' + channel.name,
+              onKeyDown: this.keyDown,
+              onKeyUp: this.keyUp,
+              onChange: this.update('message'),
+              value: this.state.message
+            })
+          )
+        )
       );
     }
   }]);
@@ -47049,12 +47645,85 @@ var Feed = function (_Component) {
 
 var msp = function msp(state) {
   return {
-    channel: null
+    channel: state.entities.channels[state.ui.activeChannel]
   };
 };
-// state.entities.channels[state.ui.activeChannel]
 
-exports.default = (0, _reactRedux.connect)(msp)(Feed);
+var mdp = function mdp(dispatch) {
+  return {
+    send: function send(message) {
+      return dispatch((0, _feed_actions.sendMessage)(message));
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(msp, mdp)(Feed);
+
+/***/ }),
+
+/***/ "./src/feed/css/Feed.css":
+/*!*******************************!*\
+  !*** ./src/feed/css/Feed.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6!./Feed.css */ "./node_modules/css-loader/index.js?!./src/feed/css/Feed.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/feed/feed_actions.js":
+/*!**********************************!*\
+  !*** ./src/feed/feed_actions.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.sendMessage = exports.receiveMessage = exports.RECEIVE_MESSAGE = undefined;
+
+var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RECEIVE_MESSAGE = exports.RECEIVE_MESSAGE = "RECEIVE_MESSAGE";
+var receiveMessage = exports.receiveMessage = function receiveMessage(message) {
+  return {
+    type: RECEIVE_MESSAGE,
+    message: message
+  };
+};
+var sendMessage = exports.sendMessage = function sendMessage(message) {
+  return function (dispatch) {
+    return console.log('sending: ', message);
+  };
+};
 
 /***/ }),
 
@@ -47199,11 +47868,16 @@ var _workspaces_reducer = __webpack_require__(/*! ../workspace/reducers/workspac
 
 var _workspaces_reducer2 = _interopRequireDefault(_workspaces_reducer);
 
+var _channels_reducer = __webpack_require__(/*! ../channel/reducers/channels_reducer */ "./src/channel/reducers/channels_reducer.js");
+
+var _channels_reducer2 = _interopRequireDefault(_channels_reducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
   users: _users_reducer2.default,
-  workspaces: _workspaces_reducer2.default
+  workspaces: _workspaces_reducer2.default,
+  channels: _channels_reducer2.default
 });
 
 /***/ }),
@@ -47299,13 +47973,18 @@ var _modal_reducer = __webpack_require__(/*! ../modal/modal_reducer */ "./src/mo
 
 var _modal_reducer2 = _interopRequireDefault(_modal_reducer);
 
+var _active_channel_reducer = __webpack_require__(/*! ../channel/reducers/active_channel_reducer */ "./src/channel/reducers/active_channel_reducer.js");
+
+var _active_channel_reducer2 = _interopRequireDefault(_active_channel_reducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
   sessionView: _session_view_reducer2.default,
   sessionEmail: _session_email_reducer2.default,
   activeWorkspace: _active_workspace_reducer2.default,
-  modal: _modal_reducer2.default
+  modal: _modal_reducer2.default,
+  activeChannel: _active_channel_reducer2.default
 });
 
 /***/ }),
