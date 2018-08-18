@@ -1858,7 +1858,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".Message__message___3WNHB {\n  padding: 10px 20px;\n  display: flex;\n}\n\n.Message__message___3WNHB:hover {\n  background: #222;\n}\n\n.Message__avatar___2ZDI7 {\n  height: 40px;\n  width: 40px;\n}\n\n.Message__timestamp___38anu {\n  color: #666;\n  font-size: 14px;\n  margin-left: 5px;\n}\n\n.Message__name___1wt6B {\n  font-weight: bold;\n  text-shadow: 0 0 10px #21ce99;\n}\n\n.Message__body___38thN {\n  margin-top: 5px;\n  font-size: 14px;\n}", ""]);
+exports.push([module.i, ".Message__message___3WNHB {\n  padding: 10px 20px;\n  display: flex;\n}\n\n.Message__message___3WNHB:hover {\n  background: #222;\n}\n\n.Message__avatar___2ZDI7 {\n  height: 40px;\n  width: 40px;\n}\n\n.Message__timestamp___38anu {\n  color: #666;\n  font-size: 14px;\n  margin-left: 5px;\n}\n\n.Message__name___1wt6B {\n  font-weight: bold;\n  text-shadow: 0 0 10px #21ce99;\n}\n\n.Message__body___38thN {\n  margin-top: 5px;\n  font-size: 14px;\n  white-space: pre-wrap;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -47628,7 +47628,6 @@ var Feed = function (_Component) {
       delete keyMap[keyCode];
       _this.setState({ keyMap: keyMap });
     }, _this.submit = function () {
-      console.log(_this.state.message);
       _this.props.send(_this.state.message);
       _this.setState({ message: '' });
     }, _this.scrollToFeedEnd = function () {

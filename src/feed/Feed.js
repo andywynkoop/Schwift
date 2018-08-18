@@ -36,7 +36,6 @@ class Feed extends Component {
   }
 
   submit = () => {
-    console.log(this.state.message);
     this.props.send(this.state.message);
     this.setState({ message: '' });
   }
