@@ -11,6 +11,8 @@ module.exports = (app, mongoose) => {
     Channel.findOne({ _id: message.channel }).exec(async (err, channelDB) => {
       if (err) res.send(err);
       channelDB.messages.push(messageDB._id);
+      //consider removing later - add user to channel automatically when they send a message
+      channelDB.members.push(message.author);
       channelDB = await channelDB.save();
       res.send(messageDB);
     });

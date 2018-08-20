@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchWorkspace } from './workspace_actions';
-import styleWS from './css/Workspace.css';
+import style from './css/Workspace.css';
 import ChannelIndex from '../channel/ChannelIndex';
 import NewChannelModal from '../channel/NewChannelModal'
 import Feed from '../feed/Feed';
@@ -13,9 +13,9 @@ class Workspace extends Component {
 
   render() {
     return(
-      <div className={styleWS.app}>
+      <div className={style.app}>
         <ChannelIndex />
-        <div className={styleWS.right}>
+        <div>
           <Feed />
           <NewChannelModal />
         </div>

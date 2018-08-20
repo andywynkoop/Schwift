@@ -24,6 +24,8 @@ module.exports = (app, mongoose) => {
         await userDB.save();
         channelDB = await channelDB.save();
         Workspace.findOne({ _id: workspaceId }).populate('channels').exec((err, workspaceDB) => {
+          console.log(userDB);
+          console.log(channelDB);
           res.send(workspaceDB);
         });
       });
@@ -33,8 +35,9 @@ module.exports = (app, mongoose) => {
   // fetch a channel with its messages
   app.get('/api/channels/:channelId', (req, res) => {
     const { channelId } = req.params;
-    Channel.findOne({ _id: channelId}).populate('messages').exec((err, channelDB) => {
+    Channel.findOne({ _id: channelId}).populate('members').populate('messages').exec((err, channelDB) => {
       if (err) res.send(err);
+      console.log(channelDB);
       res.send(channelDB);
     });
   });

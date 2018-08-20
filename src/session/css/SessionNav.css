@@ -27,6 +27,8 @@
   padding: 10px 15px;
   border-radius: 3px;
   margin: 0px 3px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .btns button:nth-child(1) {

@@ -33,7 +33,7 @@ class ChannelIndex extends Component {
         
         {workspace.channels.map(channel => 
           <h3 
-            key={channel._id} 
+            key={channel.name} 
             onClick={() => this.selectChannel(channel._id)}
           >
             {"# "}{channel.name}
