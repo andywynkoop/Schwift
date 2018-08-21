@@ -55,6 +55,12 @@
   margin-left: 10px;
 }
 
+.emailInput button:hover {
+  color: #fff;
+  box-shadow: 0px 0px 2px 2px #ed32b9;
+  cursor: pointer;
+}
+
 .signIn {
   font-size: 14px;
   margin-top: 15px;

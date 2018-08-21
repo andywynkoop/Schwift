@@ -40,3 +40,8 @@
   background: #21ce99;
   text-transform: uppercase;
 }
+
+.btns button:hover {
+  color: #fff;
+  box-shadow: 0px 0px 2px 2px #ed32b9;
+}
