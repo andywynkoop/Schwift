@@ -2,15 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import style from './css/Feed.css';
 import Textarea from 'react-textarea-autosize';
-import { sendMessage } from './feed_actions';
+import { sendMessage, receiveMessage } from './feed_actions';
 import { selectMessages } from './reducers/selectors';
 import Message from './Message';
-
 
 class Feed extends Component {
   state = {
     message: '',
     keyMap: {}
+  }
+
+  componentDidMount() {
+    this.socket = io.connect('http://localhost:3210');
+    this.socket.on('newMessage', message => {
+      this.props.receiveNewMessage(message);
+    });
+    this.socket.on('connection', message => console.log(message))
   }
 
   componentDidUpdate() {
@@ -79,7 +86,8 @@ const msp = state => ({
 });
 
 const mdp = dispatch => ({
-  send: message => dispatch(sendMessage(message))
+  send: message => dispatch(sendMessage(message)),
+  receiveNewMessage: message => dispatch(receiveMessage(message))
 });
 
 export default connect(msp, mdp)(Feed);

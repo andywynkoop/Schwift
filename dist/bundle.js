@@ -47649,6 +47649,19 @@ var Feed = function (_Component) {
   }
 
   _createClass(Feed, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.socket = io.connect('http://localhost:3210');
+      this.socket.on('newMessage', function (message) {
+        _this2.props.receiveNewMessage(message);
+      });
+      this.socket.on('connection', function (message) {
+        return console.log(message);
+      });
+    }
+  }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
       if (this.feedEnd) this.scrollToFeedEnd();
@@ -47656,7 +47669,7 @@ var Feed = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var channel = this.props.channel;
 
@@ -47678,7 +47691,7 @@ var Feed = function (_Component) {
             return _react2.default.createElement(_Message2.default, { key: message._id, message: message });
           }),
           _react2.default.createElement('div', { ref: function ref(el) {
-              return _this2.feedEnd = el;
+              return _this3.feedEnd = el;
             } })
         ),
         _react2.default.createElement(
@@ -47714,6 +47727,9 @@ var mdp = function mdp(dispatch) {
   return {
     send: function send(message) {
       return dispatch((0, _feed_actions.sendMessage)(message));
+    },
+    receiveNewMessage: function receiveNewMessage(message) {
+      return dispatch((0, _feed_actions.receiveMessage)(message));
     }
   };
 };

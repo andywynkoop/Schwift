@@ -1,4 +1,4 @@
-module.exports = (app, mongoose) => {
+module.exports = (app, mongoose, io) => {
   const Message = mongoose.model('Message');
   const Channel = mongoose.model('Channel');
 
@@ -14,6 +14,7 @@ module.exports = (app, mongoose) => {
       //consider removing later - add user to channel automatically when they send a message
       channelDB.members.push(message.author);
       channelDB = await channelDB.save();
+      io.sockets.emit('newMessage', messageDB);
       res.send(messageDB);
     });
   });
