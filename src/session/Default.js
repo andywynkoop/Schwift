@@ -27,7 +27,7 @@ class Default extends Component {
           </p>
           <form className={style.emailInput} onSubmit={this.handleSubmit}>
             <input type="text" placeholder="Email address" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
-            <button type="submit">Get Schwifty</button>
+            <button type="submit" disabled={this.state.email === ""} >Get Schwifty</button>
           </form>
           <div className={style.signIn}>
             Already using Schwift? <span onClick={() => this.props.changeSessionView(2)}> Sign In.</span>

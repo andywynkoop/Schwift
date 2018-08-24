@@ -7,12 +7,15 @@ export default class SignUpForm extends Component {
     lastname: '',
     username: '',
     email: this.props.email,
-    password: ''
+    password: '',
+    errors: {}
   }
 
-  handleSubmit = e => {
+  validate = e => {
     e.preventDefault();
-    this.props.save(this.state);
+    const errors = this.props.validate(this.state);
+    if (Object.keys(errors).length === 0) this.props.save(this.state);
+    this.setState({ errors });
   }
 
   handleClick = ({ target }) => {
@@ -21,11 +24,32 @@ export default class SignUpForm extends Component {
   
   update = field => e => this.setState({ [field]: e.target.value });
 
+  clearErrors = () => this.setState({ errors: {} });
+
+  renderErrors = () => {
+    const { errors } = this.state;
+    const messages = Object.values(errors);
+    return(
+      <div className={style.wrapper}>
+        <div className={style.form}>
+          <h1 className={style.h1}>Error</h1>
+          <p className={style.errorP}>
+            Listen, I hate to break it to you, 
+            but the form you're trying to submit is a total piece of shit.{" "}
+            {messages}{" "}<br />Why don't you get your shit together and
+            <a className={style.errorClear} onClick={this.clearErrors}> give it another try?</a>
+          </p>
+        </div>
+      </div>
+    )
+  }
+
   render() {
     const { type, fields, buttonText } = this.props;
+    if (Object.keys(this.state.errors).length > 0) return this.renderErrors();
     return(
       <div className={style.wrapper} onClick={this.handleClick} ref={el => this.blackSpace = el}>
-        <form onSubmit={this.handleSubmit} className={style.form}>
+        <form onSubmit={this.validate} className={style.form}>
           <h1 className={style.h1}>{type}</h1>
           {fields.map((field, idx) => (
             <li key={idx}>

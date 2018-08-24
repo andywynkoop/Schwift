@@ -52,3 +52,17 @@
 .btn:hover {
   box-shadow: 0px 0px 2px 2px #21ce99;
 }
+
+.errorClear {
+  color: #ed32b9;
+  cursor: pointer;
+}
+
+.errorClear:hover {
+  text-decoration: underline;
+  color: #21ce99;
+}
+
+.errorP {
+  text-align: center;
+}

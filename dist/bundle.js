@@ -1908,7 +1908,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SessionForm__wrapper___VzL3t {\n  background: #000;\n  width: 100%;\n  height: 100vh;\n  padding-top: 60px;\n}\n\n.SessionForm__form___3RrX0 {\n  background: #111;\n  border: solid 1px #ed32b9;\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n  border-radius: 3px;\n  width: 600px;\n  text-align: center;\n  padding: 30px 70px 50px 70px;\n  margin: auto;\n  margin-top: 100px;\n}\n\n.SessionForm__h1___1ybA4 {\n  color: #21ce99;\n  font-size: 32px;\n  margin-bottom: 20px;\n} \n\n.SessionForm__input___cW89X {\n  height: 60px;\n  width: 360px;\n  border: solid 1px #ed32b9;\n  border-radius: 3px;\n  padding: 15px;\n  color: black;\n  margin-bottom: 20px;\n}\n\n.SessionForm__input___cW89X:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}\n\n.SessionForm__input___cW89X::placeholder {\n  text-transform: capitalize;\n}\n\n.SessionForm__btn___1wuo6 {\n  background: #ed32b9;\n  height: 60px;\n  width: 170px;\n  border-radius: 3px;\n  font-size: 18px;\n}\n\n.SessionForm__btn___1wuo6:hover {\n  box-shadow: 0px 0px 2px 2px #21ce99;\n}", ""]);
+exports.push([module.i, ".SessionForm__wrapper___VzL3t {\n  background: #000;\n  width: 100%;\n  height: 100vh;\n  padding-top: 60px;\n}\n\n.SessionForm__form___3RrX0 {\n  background: #111;\n  border: solid 1px #ed32b9;\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n  border-radius: 3px;\n  width: 600px;\n  text-align: center;\n  padding: 30px 70px 50px 70px;\n  margin: auto;\n  margin-top: 100px;\n}\n\n.SessionForm__h1___1ybA4 {\n  color: #21ce99;\n  font-size: 32px;\n  margin-bottom: 20px;\n} \n\n.SessionForm__input___cW89X {\n  height: 60px;\n  width: 360px;\n  border: solid 1px #ed32b9;\n  border-radius: 3px;\n  padding: 15px;\n  color: black;\n  margin-bottom: 20px;\n}\n\n.SessionForm__input___cW89X:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}\n\n.SessionForm__input___cW89X::placeholder {\n  text-transform: capitalize;\n}\n\n.SessionForm__btn___1wuo6 {\n  background: #ed32b9;\n  height: 60px;\n  width: 170px;\n  border-radius: 3px;\n  font-size: 18px;\n}\n\n.SessionForm__btn___1wuo6:hover {\n  box-shadow: 0px 0px 2px 2px #21ce99;\n}\n\n.SessionForm__errorClear___2_mca {\n  color: #ed32b9;\n  cursor: pointer;\n}\n\n.SessionForm__errorClear___2_mca:hover {\n  text-decoration: underline;\n  color: #21ce99;\n}\n\n.SessionForm__errorP___12hS8 {\n  text-align: center;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1916,7 +1916,9 @@ exports.locals = {
 	"form": "SessionForm__form___3RrX0",
 	"h1": "SessionForm__h1___1ybA4",
 	"input": "SessionForm__input___cW89X",
-	"btn": "SessionForm__btn___1wuo6"
+	"btn": "SessionForm__btn___1wuo6",
+	"errorClear": "SessionForm__errorClear___2_mca",
+	"errorP": "SessionForm__errorP___12hS8"
 };
 
 /***/ }),
@@ -48350,7 +48352,7 @@ var Default = function (_Component) {
               } }),
             _react2.default.createElement(
               'button',
-              { type: 'submit' },
+              { type: 'submit', disabled: this.state.email === "" },
               'Get Schwifty'
             )
           ),
@@ -48442,10 +48444,13 @@ var SignUpForm = function (_Component) {
       lastname: '',
       username: '',
       email: _this.props.email,
-      password: ''
-    }, _this.handleSubmit = function (e) {
+      password: '',
+      errors: {}
+    }, _this.validate = function (e) {
       e.preventDefault();
-      _this.props.save(_this.state);
+      var errors = _this.props.validate(_this.state);
+      if (Object.keys(errors).length === 0) _this.props.save(_this.state);
+      _this.setState({ errors: errors });
     }, _this.handleClick = function (_ref2) {
       var target = _ref2.target;
 
@@ -48454,6 +48459,40 @@ var SignUpForm = function (_Component) {
       return function (e) {
         return _this.setState(_defineProperty({}, field, e.target.value));
       };
+    }, _this.clearErrors = function () {
+      return _this.setState({ errors: {} });
+    }, _this.renderErrors = function () {
+      var errors = _this.state.errors;
+
+      var messages = Object.values(errors);
+      return _react2.default.createElement(
+        'div',
+        { className: _SessionForm2.default.wrapper },
+        _react2.default.createElement(
+          'div',
+          { className: _SessionForm2.default.form },
+          _react2.default.createElement(
+            'h1',
+            { className: _SessionForm2.default.h1 },
+            'Error'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: _SessionForm2.default.errorP },
+            'Listen, I hate to break it to you, but the form you\'re trying to submit is a total piece of shit.',
+            " ",
+            messages,
+            " ",
+            _react2.default.createElement('br', null),
+            'Why don\'t you get your shit together and',
+            _react2.default.createElement(
+              'a',
+              { className: _SessionForm2.default.errorClear, onClick: _this.clearErrors },
+              ' give it another try?'
+            )
+          )
+        )
+      );
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -48467,6 +48506,7 @@ var SignUpForm = function (_Component) {
           fields = _props.fields,
           buttonText = _props.buttonText;
 
+      if (Object.keys(this.state.errors).length > 0) return this.renderErrors();
       return _react2.default.createElement(
         'div',
         { className: _SessionForm2.default.wrapper, onClick: this.handleClick, ref: function ref(el) {
@@ -48474,7 +48514,7 @@ var SignUpForm = function (_Component) {
           } },
         _react2.default.createElement(
           'form',
-          { onSubmit: this.handleSubmit, className: _SessionForm2.default.form },
+          { onSubmit: this.validate, className: _SessionForm2.default.form },
           _react2.default.createElement(
             'h1',
             { className: _SessionForm2.default.h1 },
@@ -48609,6 +48649,8 @@ var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-r
 
 var _session_actions = __webpack_require__(/*! ./session_actions */ "./src/session/session_actions.js");
 
+var _session_util = __webpack_require__(/*! ./session_util */ "./src/session/session_util.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var msp = function msp(state) {
@@ -48627,6 +48669,9 @@ var mdp = function mdp(dispatch) {
     },
     closeModal: function closeModal() {
       return dispatch((0, _session_actions.receiveSessionView)(0));
+    },
+    validate: function validate(state) {
+      return (0, _session_util.signInValidate)(state);
     }
   };
 };
@@ -49105,6 +49150,33 @@ var receiveSessionEmail = exports.receiveSessionEmail = function receiveSessionE
     type: RECEIVE_SESSION_EMAIL,
     email: email
   };
+};
+
+/***/ }),
+
+/***/ "./src/session/session_util.js":
+/*!*************************************!*\
+  !*** ./src/session/session_util.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var signInValidate = exports.signInValidate = function signInValidate(_ref) {
+  var email = _ref.email,
+      password = _ref.password;
+
+  var errors = {};
+  if (!email) errors.email = "How the hell are you supposed to sign in without an email address? ";else if (email.length < 6) errors.email = "Your email address is wayyyyy too short, pal. ";else if (!email.includes("@")) errors.email = "That email address doesn't even have the little @ thing. ";
+
+  if (!password) errors.password = "You didn't even write a password. ";
+  if (password.length < 8) errors.password = "That password isn't even long enough to be a valid password. ";
+  return errors;
 };
 
 /***/ }),
