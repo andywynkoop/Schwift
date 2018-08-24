@@ -48446,6 +48446,10 @@ var SignUpForm = function (_Component) {
     }, _this.handleSubmit = function (e) {
       e.preventDefault();
       _this.props.save(_this.state);
+    }, _this.handleClick = function (_ref2) {
+      var target = _ref2.target;
+
+      if (target === _this.blackSpace) _this.props.closeModal();
     }, _this.update = function (field) {
       return function (e) {
         return _this.setState(_defineProperty({}, field, e.target.value));
@@ -48465,7 +48469,9 @@ var SignUpForm = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: _SessionForm2.default.wrapper },
+        { className: _SessionForm2.default.wrapper, onClick: this.handleClick, ref: function ref(el) {
+            return _this2.blackSpace = el;
+          } },
         _react2.default.createElement(
           'form',
           { onSubmit: this.handleSubmit, className: _SessionForm2.default.form },
@@ -48618,6 +48624,9 @@ var mdp = function mdp(dispatch) {
   return {
     save: function save(user) {
       return dispatch((0, _session_actions.login)(user));
+    },
+    closeModal: function closeModal() {
+      return dispatch((0, _session_actions.receiveSessionView)(0));
     }
   };
 };
@@ -48663,6 +48672,9 @@ var mdp = function mdp(dispatch) {
   return {
     save: function save(user) {
       return dispatch((0, _session_actions.createUser)(user));
+    },
+    closeModal: function closeModal() {
+      return dispatch((0, _session_actions.receiveSessionView)(0));
     }
   };
 };

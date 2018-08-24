@@ -17,7 +17,7 @@ module.exports = (app, mongoose) => {
     user.workspaces = [];
     const userModel = new User(user);
     userModel.save().then((err, userDB) => {
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       res.send(userDB);
     });
   });
@@ -26,7 +26,7 @@ module.exports = (app, mongoose) => {
   app.get('/api/session', (req, res) => {
     const { sessionToken } = getSession(req);
     User.findOne({ sessionToken: sessionToken }, (err, userDB) => {
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       res.send(userDB);
     });
   });
@@ -35,8 +35,8 @@ module.exports = (app, mongoose) => {
   app.post('/api/session', async (req, res) => {
     const { email, password } = req.body.user;
     User.findOne({ email: email }, async (err, userDB) => {
-      if (err) res.send(err);
-      if (!userDB) return res.send("No User Found");
+      if (err) res.status(422).send(err);
+      if (!userDB) return res.status(422).send("No User Found");
       const isPassword = await check(password, userDB.passwordDigest);
       if (isPassword) {
         userDB.sessionToken = await random();
@@ -44,7 +44,7 @@ module.exports = (app, mongoose) => {
         const currentUser = await login(req, res, userDB);
         res.send(currentUser);
       } else {
-        res.send('Invalid password');
+        res.status(422).send('Invalid password');
       }
     });
   });

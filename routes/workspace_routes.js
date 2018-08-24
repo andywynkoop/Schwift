@@ -9,10 +9,10 @@ module.exports = (app, mongoose) => {
     const { workspace, user } = req.body;
     const workspaceModel = new Workspace(workspace);
     User.findOne({ _id: user._id }, async (err, userDB) => {
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       workspaceModel.members.push(userDB._id);
       const workspaceDB = await workspaceModel.save();
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       const userModel = new User(userDB);
       userModel.workspaces.push(workspaceDB._id);
       await userModel.save();
@@ -25,7 +25,7 @@ module.exports = (app, mongoose) => {
     const { name } = req.query;
     Workspace.find({ name: name })
       .exec((err, workspaces) => {
-        if (err) res.send(err);
+        if (err) res.status(422).send(err);
         const workspaceExists = (workspaces.length !== 0);
         let foundWorkspaceId;
         if (workspaceExists) foundWorkspaceId = workspaces[0]._id;
@@ -39,7 +39,7 @@ module.exports = (app, mongoose) => {
     User.findOne({ _id: userId })
       .populate('workspaces')
       .exec((err, userDB) => {
-        if (err) res.send(err);
+        if (err) res.status(422).send(err);
         res.send(userDB);
       });
   });
@@ -48,7 +48,7 @@ module.exports = (app, mongoose) => {
   app.get('/api/workspace/:workspaceId', (req, res) => {
     const { workspaceId } = req.params;
     Workspace.findOne({ _id: workspaceId }).populate('channels').exec((err, workspaceDB) => {
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       res.send(workspaceDB);
     });
   });
@@ -58,11 +58,11 @@ module.exports = (app, mongoose) => {
     const { workspaceId } = req.params;
     const { user } = req.body;
     Workspace.findOne({ _id: workspaceId }).exec(async (err, workspaceDB) => {
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       workspaceDB.members.push(user._id);
       workspaceDB = await workspaceDB.save();
       User.findOne({ _id: user._id }).exec(async (err, userDB) => {
-        if (err) res.send(err);
+        if (err) res.status(422).send(err);
         userDB.workspaces.push(workspaceDB._id);
         userDB = await userDB.save();
         res.send(workspaceDB);

@@ -1,6 +1,6 @@
 import SessionForm from './SessionForm';
 import { connect } from 'react-redux';
-import { login } from './session_actions';
+import { login, receiveSessionView } from './session_actions';
 
 const msp = (state) => ({
   type: 'Sign In To Your Account',
@@ -10,7 +10,8 @@ const msp = (state) => ({
 });
 
 const mdp = dispatch => ({
-  save: user => dispatch(login(user))
+  save: user => dispatch(login(user)),
+  closeModal: () => dispatch(receiveSessionView(0)),
 });
 
 export default connect(msp, mdp)(SessionForm);

@@ -12,13 +12,13 @@ module.exports = (app, mongoose) => {
     const { userId, workspaceId, channel } = req.body;
     channelModel = new Channel(channel);
     Workspace.findOne({ _id: workspaceId }).exec(async (err, workspaceDB) => {
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       channelModel.workspace = workspaceDB._id;
       let channelDB = await channelModel.save();
       workspaceDB.channels.push(channelDB._id);
       workspaceDB = await workspaceDB.save();
       User.findOne({ _id: userId }).exec(async (err, userDB) => {
-        if (err) res.send(err);
+        if (err) res.status(422).send(err);
         userDB.channels.push(channelDB._id);
         channelDB.members.push(userDB._id);
         await userDB.save();
@@ -34,7 +34,7 @@ module.exports = (app, mongoose) => {
   app.get('/api/channels/:channelId', (req, res) => {
     const { channelId } = req.params;
     Channel.findOne({ _id: channelId}).populate('members').populate('messages').exec((err, channelDB) => {
-      if (err) res.send(err);
+      if (err) res.status(422).send(err);
       res.send(channelDB);
     });
   });
