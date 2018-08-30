@@ -54,7 +54,6 @@ class Feed extends Component {
   render() {
     const { channel } = this.props;
     if (!channel) return <div/>;
-    console.log(this.state.message);
     return(
       <div className={style.feed}>
         <div className={style.feedHeader}>

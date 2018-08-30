@@ -7,7 +7,8 @@ export const receiveUser = user => ({
 });
 export const createUser = user => dispatch =>
   axios.post('/api/users', { user })
-    .then(({data: user}) => dispatch(receiveCurrentUser(user)));
+    .then(({data: user}) => dispatch(receiveCurrentUser(user)))
+    .catch(() => dispatch(receiveSessionError("Looks like somebody else already registered with this email")))
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const receiveCurrentUser = user => ({
@@ -20,7 +21,8 @@ export const fetchCurrentUser = () => dispatch =>
 
 export const login = user => dispatch => 
   axios.post('/api/session', { user })
-    .then(({data: user}) => dispatch(receiveCurrentUser(user)));
+    .then(({ data: user }) => dispatch(receiveCurrentUser(user)))
+    .catch(() => dispatch(receiveSessionError("Wrong email or password")));
 
 export const REMOVE_CURRENT_USER = "REMOVE_CURRENT_USER";
 export const removeCurrentUser = () => ({ type: REMOVE_CURRENT_USER });
@@ -38,4 +40,15 @@ export const RECEIVE_SESSION_EMAIL = "RECEIVE_SESSION_EMAIL";
 export const receiveSessionEmail = email => ({
   type: RECEIVE_SESSION_EMAIL,
   email
-})
+});
+
+export const RECEIVE_SESSION_ERROR = "RECEIVE_SESSION_ERROR";
+export const receiveSessionError = error => ({
+  type: RECEIVE_SESSION_ERROR,
+  error
+});
+
+export const REMOVE_SESSION_ERROR = "REMOVE_SESSION_ERROR";
+export const removeSessionError = () => ({
+  type: REMOVE_SESSION_ERROR
+});

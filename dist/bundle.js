@@ -1908,7 +1908,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SessionForm__wrapper___VzL3t {\n  background: #000;\n  width: 100%;\n  height: 100vh;\n  padding-top: 60px;\n}\n\n.SessionForm__form___3RrX0 {\n  background: #111;\n  border: solid 1px #ed32b9;\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n  border-radius: 3px;\n  width: 600px;\n  text-align: center;\n  padding: 30px 70px 50px 70px;\n  margin: auto;\n  margin-top: 100px;\n}\n\n.SessionForm__h1___1ybA4 {\n  color: #21ce99;\n  font-size: 32px;\n  margin-bottom: 20px;\n} \n\n.SessionForm__input___cW89X {\n  height: 60px;\n  width: 360px;\n  border: solid 1px #ed32b9;\n  border-radius: 3px;\n  padding: 15px;\n  color: black;\n  margin-bottom: 20px;\n}\n\n.SessionForm__input___cW89X:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}\n\n.SessionForm__input___cW89X::placeholder {\n  text-transform: capitalize;\n}\n\n.SessionForm__btn___1wuo6 {\n  background: #ed32b9;\n  height: 60px;\n  width: 170px;\n  border-radius: 3px;\n  font-size: 18px;\n}\n\n.SessionForm__btn___1wuo6:hover {\n  box-shadow: 0px 0px 2px 2px #21ce99;\n}\n\n.SessionForm__errorClear___2_mca {\n  color: #ed32b9;\n  cursor: pointer;\n}\n\n.SessionForm__errorClear___2_mca:hover {\n  text-decoration: underline;\n  color: #21ce99;\n}\n\n.SessionForm__errorP___12hS8 {\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".SessionForm__wrapper___VzL3t {\n  background: #000;\n  width: 100%;\n  height: 100vh;\n  padding-top: 60px;\n}\n\n.SessionForm__form___3RrX0 {\n  background: #111;\n  border: solid 1px #ed32b9;\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n  border-radius: 3px;\n  width: 600px;\n  text-align: center;\n  padding: 30px 70px 50px 70px;\n  margin: auto;\n  margin-top: 100px;\n}\n\n.SessionForm__h1___1ybA4 {\n  color: #21ce99;\n  font-size: 32px;\n  margin-bottom: 20px;\n} \n\n.SessionForm__input___cW89X {\n  height: 60px;\n  width: 360px;\n  border: solid 1px #ed32b9;\n  border-radius: 3px;\n  padding: 15px;\n  color: black;\n  margin-bottom: 20px;\n}\n\n.SessionForm__input___cW89X:focus {\n  box-shadow: 0px 0px 2px 2px #ed32b9;\n}\n\n.SessionForm__input___cW89X::placeholder {\n  text-transform: capitalize;\n}\n\n.SessionForm__btn___1wuo6 {\n  background: #ed32b9;\n  height: 60px;\n  width: 170px;\n  border-radius: 3px;\n  font-size: 18px;\n}\n\n.SessionForm__btn___1wuo6:hover {\n  box-shadow: 0px 0px 2px 2px #21ce99;\n}\n\n.SessionForm__errorClear___2_mca {\n  color: #ed32b9;\n  cursor: pointer;\n}\n\n.SessionForm__errorClear___2_mca:hover {\n  text-decoration: underline;\n  color: #21ce99;\n}\n\n.SessionForm__errorP___12hS8 {\n  text-align: center;\n}\n\n.SessionForm__serverError___2bBG6 {\n  color: red;\n  text-shadow: 0px 0px 2px 2px red;\n  margin-bottom: 15px;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1918,7 +1918,8 @@ exports.locals = {
 	"input": "SessionForm__input___cW89X",
 	"btn": "SessionForm__btn___1wuo6",
 	"errorClear": "SessionForm__errorClear___2_mca",
-	"errorP": "SessionForm__errorP___12hS8"
+	"errorP": "SessionForm__errorP___12hS8",
+	"serverError": "SessionForm__serverError___2bBG6"
 };
 
 /***/ }),
@@ -47676,7 +47677,6 @@ var Feed = function (_Component) {
       var channel = this.props.channel;
 
       if (!channel) return _react2.default.createElement('div', null);
-      console.log(this.state.message);
       return _react2.default.createElement(
         'div',
         { className: _Feed2.default.feed },
@@ -48152,6 +48152,34 @@ exports.default = (0, _redux.combineReducers)({
 
 /***/ }),
 
+/***/ "./src/reducers/errors_reducer.js":
+/*!****************************************!*\
+  !*** ./src/reducers/errors_reducer.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _redux = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+
+var _session_error_reducer = __webpack_require__(/*! ../session/reducers/session_error_reducer */ "./src/session/reducers/session_error_reducer.js");
+
+var _session_error_reducer2 = _interopRequireDefault(_session_error_reducer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _redux.combineReducers)({
+  sessionError: _session_error_reducer2.default
+});
+
+/***/ }),
+
 /***/ "./src/reducers/root_reducer.js":
 /*!**************************************!*\
   !*** ./src/reducers/root_reducer.js ***!
@@ -48180,12 +48208,17 @@ var _ui_reducer = __webpack_require__(/*! ./ui_reducer */ "./src/reducers/ui_red
 
 var _ui_reducer2 = _interopRequireDefault(_ui_reducer);
 
+var _errors_reducer = __webpack_require__(/*! ./errors_reducer */ "./src/reducers/errors_reducer.js");
+
+var _errors_reducer2 = _interopRequireDefault(_errors_reducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
   entities: _entities_reducer2.default,
   session: _session_reducer2.default,
-  ui: _ui_reducer2.default
+  ui: _ui_reducer2.default,
+  errors: _errors_reducer2.default
 });
 
 /***/ }),
@@ -48448,6 +48481,7 @@ var SignUpForm = function (_Component) {
       errors: {}
     }, _this.validate = function (e) {
       e.preventDefault();
+      _this.props.clearSessionError();
       var errors = _this.props.validate(_this.state);
       if (Object.keys(errors).length === 0) _this.props.save(_this.state);
       _this.setState({ errors: errors });
@@ -48483,7 +48517,6 @@ var SignUpForm = function (_Component) {
             " ",
             messages,
             " ",
-            _react2.default.createElement('br', null),
             'Why don\'t you get your shit together and',
             _react2.default.createElement(
               'a',
@@ -48497,6 +48530,12 @@ var SignUpForm = function (_Component) {
   }
 
   _createClass(SignUpForm, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      console.log('clearing');
+      this.props.clearSessionError();
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -48533,6 +48572,11 @@ var SignUpForm = function (_Component) {
               })
             );
           }),
+          _react2.default.createElement(
+            'p',
+            { className: _SessionForm2.default.serverError },
+            this.props.error
+          ),
           _react2.default.createElement(
             'button',
             { className: _SessionForm2.default.btn, type: 'submit' },
@@ -48658,7 +48702,8 @@ var msp = function msp(state) {
     type: 'Sign In To Your Account',
     fields: ['email', 'password'],
     buttonText: 'Sign In',
-    email: state.ui.sessionEmail
+    email: state.ui.sessionEmail,
+    error: state.errors.sessionError
   };
 };
 
@@ -48672,6 +48717,9 @@ var mdp = function mdp(dispatch) {
     },
     validate: function validate(state) {
       return (0, _session_util.signInValidate)(state);
+    },
+    clearSessionError: function clearSessionError() {
+      return dispatch((0, _session_actions.removeSessionError)());
     }
   };
 };
@@ -48702,6 +48750,8 @@ var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-r
 
 var _session_actions = __webpack_require__(/*! ./session_actions */ "./src/session/session_actions.js");
 
+var _session_util = __webpack_require__(/*! ./session_util */ "./src/session/session_util.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var msp = function msp(state) {
@@ -48709,7 +48759,8 @@ var msp = function msp(state) {
     type: 'Create Account',
     fields: ['email', 'firstname', 'lastname', 'username', 'password'],
     buttonText: 'Get Schwifty!!!',
-    email: state.ui.sessionEmail
+    email: state.ui.sessionEmail,
+    error: state.errors.sessionError
   };
 };
 
@@ -48720,6 +48771,12 @@ var mdp = function mdp(dispatch) {
     },
     closeModal: function closeModal() {
       return dispatch((0, _session_actions.receiveSessionView)(0));
+    },
+    validate: function validate(state) {
+      return (0, _session_util.signUpValidate)(state);
+    },
+    clearSessionError: function clearSessionError() {
+      return dispatch((0, _session_actions.removeSessionError)());
     }
   };
 };
@@ -48949,6 +49006,40 @@ exports.default = function () {
 
 /***/ }),
 
+/***/ "./src/session/reducers/session_error_reducer.js":
+/*!*******************************************************!*\
+  !*** ./src/session/reducers/session_error_reducer.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _session_actions = __webpack_require__(/*! ../session_actions */ "./src/session/session_actions.js");
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var action = arguments[1];
+  var type = action.type,
+      error = action.error;
+
+  switch (type) {
+    case _session_actions.RECEIVE_SESSION_ERROR:
+      return error;
+    case _session_actions.REMOVE_SESSION_ERROR:
+      return null;
+    default:
+      return state;
+  }
+};
+
+/***/ }),
+
 /***/ "./src/session/reducers/session_reducer.js":
 /*!*************************************************!*\
   !*** ./src/session/reducers/session_reducer.js ***!
@@ -49075,7 +49166,7 @@ exports.default = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.receiveSessionEmail = exports.RECEIVE_SESSION_EMAIL = exports.receiveSessionView = exports.RECEIVE_SESSION_VIEW = exports.logout = exports.removeCurrentUser = exports.REMOVE_CURRENT_USER = exports.login = exports.fetchCurrentUser = exports.receiveCurrentUser = exports.RECEIVE_CURRENT_USER = exports.createUser = exports.receiveUser = exports.RECEIVE_USER = undefined;
+exports.removeSessionError = exports.REMOVE_SESSION_ERROR = exports.receiveSessionError = exports.RECEIVE_SESSION_ERROR = exports.receiveSessionEmail = exports.RECEIVE_SESSION_EMAIL = exports.receiveSessionView = exports.RECEIVE_SESSION_VIEW = exports.logout = exports.removeCurrentUser = exports.REMOVE_CURRENT_USER = exports.login = exports.fetchCurrentUser = exports.receiveCurrentUser = exports.RECEIVE_CURRENT_USER = exports.createUser = exports.receiveUser = exports.RECEIVE_USER = undefined;
 
 var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
@@ -49095,6 +49186,8 @@ var createUser = exports.createUser = function createUser(user) {
     return _axios2.default.post('/api/users', { user: user }).then(function (_ref) {
       var user = _ref.data;
       return dispatch(receiveCurrentUser(user));
+    }).catch(function () {
+      return dispatch(receiveSessionError("Looks like somebody else already registered with this email"));
     });
   };
 };
@@ -49120,6 +49213,8 @@ var login = exports.login = function login(user) {
     return _axios2.default.post('/api/session', { user: user }).then(function (_ref3) {
       var user = _ref3.data;
       return dispatch(receiveCurrentUser(user));
+    }).catch(function () {
+      return dispatch(receiveSessionError("Wrong email or password"));
     });
   };
 };
@@ -49152,6 +49247,21 @@ var receiveSessionEmail = exports.receiveSessionEmail = function receiveSessionE
   };
 };
 
+var RECEIVE_SESSION_ERROR = exports.RECEIVE_SESSION_ERROR = "RECEIVE_SESSION_ERROR";
+var receiveSessionError = exports.receiveSessionError = function receiveSessionError(error) {
+  return {
+    type: RECEIVE_SESSION_ERROR,
+    error: error
+  };
+};
+
+var REMOVE_SESSION_ERROR = exports.REMOVE_SESSION_ERROR = "REMOVE_SESSION_ERROR";
+var removeSessionError = exports.removeSessionError = function removeSessionError() {
+  return {
+    type: REMOVE_SESSION_ERROR
+  };
+};
+
 /***/ }),
 
 /***/ "./src/session/session_util.js":
@@ -49172,10 +49282,31 @@ var signInValidate = exports.signInValidate = function signInValidate(_ref) {
       password = _ref.password;
 
   var errors = {};
-  if (!email) errors.email = "How the hell are you supposed to sign in without an email address? ";else if (email.length < 6) errors.email = "Your email address is wayyyyy too short, pal. ";else if (!email.includes("@")) errors.email = "That email address doesn't even have the little @ thing. ";
+  if (!email) errors.email = "How do you expect to sign in without an email address? ";else if (email.length < 6) errors.email = "That email address is wayyyyy too short, pal. ";else if (!email.includes("@")) errors.email = "That email address doesn't even have the little @ thing. ";
 
   if (!password) errors.password = "You didn't even write a password. ";
   if (password.length < 8) errors.password = "That password isn't even long enough to be a valid password. ";
+  return errors;
+};
+
+var signUpValidate = exports.signUpValidate = function signUpValidate(_ref2) {
+  var email = _ref2.email,
+      password = _ref2.password,
+      firstname = _ref2.firstname,
+      lastname = _ref2.lastname,
+      username = _ref2.username;
+
+  var errors = {};
+  if (!email) errors.email = "You're going to need an email address to sign up for an account. ";else if (email.length < 6) errors.email = "That email address is wayyyyy too short, pal. ";else if (!email.includes("@")) errors.email = 'That "email address" doesn\'t even have the little @ thing. ';
+
+  if (!firstname) errors.firstname = "You didn't give a first name. ";
+
+  if (!lastname) errors.lastname = "You didn't give a last name. ";
+
+  if (!username) errors.username = "You didn't give a username. ";
+
+  if (!password) errors.password = "You didn't even write a password. ";
+  if (password.length < 8) errors.password = "You need to come up with a password that's AT LEAST 8 characters. ";
   return errors;
 };
 

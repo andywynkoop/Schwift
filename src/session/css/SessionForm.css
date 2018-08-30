@@ -66,3 +66,9 @@
 .errorP {
   text-align: center;
 }
+
+.serverError {
+  color: red;
+  text-shadow: 0px 0px 2px 2px red;
+  margin-bottom: 15px;
+}

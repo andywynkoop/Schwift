@@ -7,18 +7,25 @@ module.exports = (app, mongoose) => {
   // create a new user and log them in
   app.post('/api/users', async (req, res) => {
     const { user } = req.body;
-    // replace password with password digest
-    const passwordDigest = await hash(user.password);
-    user.passwordDigest = passwordDigest;
-    delete user.password;
-    const token = await random();
-    user.sessionToken = token;
-    await login(req, res, user);
-    user.workspaces = [];
-    const userModel = new User(user);
-    userModel.save().then((err, userDB) => {
-      if (err) res.status(422).send(err);
-      res.send(userDB);
+    User.findOne({ email: user.email }, async (err, userDB) => {
+      if (err) res.status(422).send(err)
+      // someone already registered with the same email
+      if (userDB) {
+        res.status(422).send("email taken");
+      } else {
+        // replace password with password digest
+        const passwordDigest = await hash(user.password);
+        user.passwordDigest = passwordDigest;
+        delete user.password;
+        const token = await random();
+        user.sessionToken = token;
+        await login(req, res, user);
+        user.workspaces = [];
+        const userModel = new User(user);
+        userModel.save().then((userDB) => {
+          res.send(userDB);
+        });
+      }
     });
   });
 
